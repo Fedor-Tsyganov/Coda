@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Seznamy skladeb</string>
+    <string name="drawer_settings">Nastavení</string>
+    <string name="drawer_all">Všechny stanice</string>
+    <string name="drawer_search">Hledání</string>
+    <string name="drawer_dance">Taneční</string>
+    <string name="drawer_hiphop">Hip hop</string>
+    <string name="drawer_jazz">Jazz</string>
+    <string name="drawer_classic">Klasická</string>
+    <string name="drawer_top_forty">40 nejlepších hitů</string>
+    <string name="drawer_oldies">Staré hity</string>
+    <string name="drawer_contemporary">Moderní</string>
+    <string name="drawer_lounge">Lounge</string>
+    <string name="drawer_rock">Rock</string>
+    <string name="drawer_alternative">Alternativní</string>
+    <string name="drawer_student">Studentská</string>
+    <string name="drawer_country">Kántry</string>
+    <string name="button_dialog_radios">Zrušení</string>
+    <string name="settings_wifi">Přenos pouze přes Wi-Fi</string>
+    <string name="settings_share">Sdílet aplikaci</string>
+    <string name="settings_playlist">Třídit seznamy skladeb</string>
+    <string name="settings_sort">Třídit rozhlasové stanice</string>
+    <string name="settings_timer">Nastavit časovač automatického vypnutí</string>
+    <string name="settings_alarm_days">Nastavit dny budíku</string>
+    <string name="settings_about">Informace o programu</string>
+    <string name="station_name">Název</string>
+    <string name="station_country">Země</string>
+    <string name="station_genre">Žánr</string>
+    <string name="settings_dialog_wifi">Pro snížení nákladů na komunikační služby nezapínejte přenos přes mobilní sítě</string>
+    <string name="settings_dialog_set_timer">Nastavte časovač automatického vypnutí a usněte s příjemnou hudbou</string>
+    <string name="settings_dialog_sort">Třídit seznam rozhlasových stanic</string>
+    <string name="settings_dialog_sort_stations_az">Dle názvu stanice A-Z</string>
+    <string name="settings_dialog_sort_stations_za">Dle názvu stanice Z-A</string>
+    <string name="settings_dialog_sort_countries_az">Dle názvu země A-Z</string>
+    <string name="settings_dialog_sort_countries_za">Dle názvu země Z-A</string>
+    <string name="settings_dialog_sort_choice_stations_az">zvolit: stanice A-Z</string>
+    <string name="settings_dialog_sort_choice_stations_za">zvolit: stanice Z-A</string>
+    <string name="settings_dialog_sort_choice_countries_az">zvolit: země A-Z</string>
+    <string name="settings_dialog_sort_choice_countries_za">zvolit: země Z-A</string>
+    <string name="alarm_notification_title">Budík</string>
+    <string name="alarm_notification_big_text">Zapnutí časovačem</string>
+    <string name="alarm_notification_text">Pro zrušení stiskněte zprávu</string>
+    <string name="dialog_alarm">Nastavit budík</string>
+    <string name="dialog_close">Zavřít</string>
+    <string name="dialog_set_timer">Nastavit časovač</string>
+    <string name="dialog_timer_min">min (minut)</string>
+    <string name="dialog_stations">STORNO</string>
+    <string name="dialog_playlist_action">Zvolte úkon</string>
+    <string name="dialog_playlist_action_add">přidat do seznamu skladeb</string>
+    <string name="dialog_playlist_action_remove">odstranit ze seznamu skladeb</string>
+    <string name="dialog_playlist_action_delete">Odstranit</string>
+    <string name="dialog_playlist_action_rename">Přejmenovat</string>
+    <string name="dialog_create_playlist_create">Vytvořit</string>
+    <string name="dialog_cancel">Zrušení</string>
+    <string name="dialog_rename_text">Zadat nový název seznamu skladeb</string>
+    <string name="dialog_rename">Přejmenovat</string>
+    <string name="dialog_remove_not_in_pl">Není v seznamu skladeb</string>
+    <string name="dialog_remove">Vybrat seznam skladeb</string>
+    <string name="dialog_create_playlist_notext">Zadat název</string>
+    <string name="playlist">Seznam skladeb</string>
+    <string name="playlist_dialog">Vytvořit nový seznam skladeb</string>
+    <string name="playlist_dialog_hint">Název</string>
+    <string name="playlist_station_counter_singular">stanice</string>
+    <string name="playlist_station_counter_plural">stanice</string>
+    <string name="playlist_create">Vytvořit seznam skladeb</string>
+    <string name="playlist_empty_state_main_text">Seznamy skladeb nejsou k dispozici</string>
+    <string name="playlist_empty_state_explanation_text">Vytvořte si nový seznam skladeb tlačítkem s plusem</string>
+    <string name="playlist_empty_state_stations_main_text">Obsah není k dispozici</string>
+    <string name="playlist_empty_state_stations_explanation_text">Můžete přidat stanici podle svého chtění posunutím řádky stanic na levé straně a kliknutím na tlačítko seznamu skladeb</string>
+    <string name="fragment_search">Hledání</string>
+    <string name="fragment_search_stations">STANICE</string>
+    <string name="fragment_search_countries">ZEMĚ</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="connection_checker_airplane_mode">Vypnout autonomní režim</string>
+    <string name="connection_checker_wifi_notcnctd">připojit se k Wi-Fi síti</string>
+    <string name="connection_checker_no_wifi">Zapněte Wi-Fi pro připojení k přenosu</string>
+    <string name="notification_posted">Zpráva odeslána</string>
+    <string name="sleep_timer_title">Časovač automatického vypnutí</string>
+    <string name="sleep_timer_text">Stiskněte pro zrušení časovače automatického vypnutí</string>
+    <string name="coda_share_text">Navštivte webové stránky Coda! Stáhnout aplikaci</string>
+    <string name="coda_share_via">Sdílet Coda přes</string>
+
+    <string name="country_austria">Rakousko</string>
+    <string name="country_belarus">Bělorusko</string>
+    <string name="country_belgium">Belgie</string>
+    <string name="country_bulgaria">Bulharsko</string>
+    <string name="country_croatia">Chorvatsko</string>
+    <string name="country_czechrepublic">Česká republika</string>
+    <string name="country_denmark">Dánsko</string>
+    <string name="country_estonia">Estonsko</string>
+    <string name="country_finland">Finsko</string>
+    <string name="country_france">Francie</string>
+    <string name="country_germany">Německo</string>
+    <string name="country_greece">Řecko</string>
+    <string name="country_hungary">Maďarsko</string>
+    <string name="country_ireland">Irsko</string>
+    <string name="country_italy">Itálie</string>
+    <string name="country_latvia">Lotyšsko</string>
+    <string name="country_lithuania">Litvy</string>
+    <string name="country_luxembourg">Lucemburk</string>
+    <string name="country_macedonia">Makedonie</string>
+    <string name="country_netherlands">Nizozemsko</string>
+    <string name="country_norway">Norsko</string>
+    <string name="country_poland">Polsko</string>
+    <string name="country_russia">Rusko</string>
+    <string name="country_slovakia">Slovensko</string>
+    <string name="country_slovenia">Slovinska</string>
+    <string name="country_spain">Španělsko</string>
+    <string name="country_sweden">Švédsko</string>
+    <string name="country_switzerland">Švýcarsko</string>
+    <string name="country_ukraine">Ukrajina</string>
+    <string name="country_unitedkingdom">Spojené Království</string>
+    <string name="country_usa">Spojené Státy</string>
+    <string name="fragment_search_noresults">Žádné výsledky vyhledávání</string>
+    <string-array name="usa_synonyms">
+        <item>USA</item>
+        <item>Amerika</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>Velká Británie</item>
+        <item>Anglie</item>
+        <item>Británie</item>
+    </string-array>
+
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

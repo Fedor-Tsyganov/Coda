@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Плейлисты</string>
+    <string name="drawer_settings">Настройки</string>
+    <string name="drawer_all">Все станции</string>
+    <string name="drawer_search">Поиск</string>
+    <string name="drawer_dance">Танцевальная</string>
+    <string name="drawer_hiphop">Хип-хоп</string>
+    <string name="drawer_jazz">Джаз</string>
+    <string name="drawer_classic">Классика</string>
+    <string name="drawer_top_forty">40 лучших хитов</string>
+    <string name="drawer_oldies">Старые хиты</string>
+    <string name="drawer_contemporary">Современная</string>
+    <string name="drawer_lounge">Лаунж</string>
+    <string name="drawer_rock">Рок</string>
+    <string name="drawer_alternative">Альтернативная</string>
+    <string name="drawer_student">Студенческая</string>
+    <string name="drawer_country">Кантри</string>
+    <string name="button_dialog_radios">Отмена</string>
+    <string name="settings_wifi">Трансляция только через Wi-Fi</string>
+    <string name="settings_share">Поделиться приложением</string>
+    <string name="settings_playlist">Сортировать плейлисты</string>
+    <string name="settings_sort">Сортировать радиостанции</string>
+    <string name="settings_timer">Установить таймер автовыключения</string>
+    <string name="settings_alarm_days">Установить дни будильника</string>
+    <string name="settings_about">Сведения о программе</string>
+    <string name="station_name">Название</string>
+    <string name="station_country">Страна</string>
+    <string name="station_genre">Жанр</string>
+    <string name="settings_dialog_wifi">Для снижения расходов на оплату услуг связи не включайте трансляции через мобильные сети</string>
+    <string name="settings_dialog_set_timer">Установите таймер автовыключения и засыпайте под приятную музыку</string>
+    <string name="settings_dialog_sort">Сортировать список радиостанций</string>
+    <string name="settings_dialog_sort_stations_az">По имени станции от А до Я</string>
+    <string name="settings_dialog_sort_stations_za">По имени станции от Я до А</string>
+    <string name="settings_dialog_sort_countries_az">По названию страны от А до Я</string>
+    <string name="settings_dialog_sort_countries_za">По названию страны от Я до А</string>
+    <string name="settings_dialog_sort_choice_stations_az">выбрать: станции от А до Я</string>
+    <string name="settings_dialog_sort_choice_stations_za">выбрать: станции от Я до А</string>
+    <string name="settings_dialog_sort_choice_countries_az">выбрать: страна от А до Я</string>
+    <string name="settings_dialog_sort_choice_countries_za">выбрать: страна от Я до А</string>
+    <string name="alarm_notification_title">Будильник</string>
+    <string name="alarm_notification_big_text">Таймерное включение</string>
+    <string name="alarm_notification_text">Нажмите сообщение для отмены</string>
+    <string name="dialog_alarm">Установить будильник</string>
+    <string name="dialog_close">Закрыть</string>
+    <string name="dialog_set_timer">Установить таймер</string>
+    <string name="dialog_timer_min">мин (минуты)</string>
+    <string name="dialog_stations">ОТМЕНА</string>
+    <string name="dialog_playlist_action">Выберите действие</string>
+    <string name="dialog_playlist_action_add">добавить в плейлист</string>
+    <string name="dialog_playlist_action_remove">удалить из плейлиста</string>
+    <string name="dialog_playlist_action_delete">Удалить</string>
+    <string name="dialog_playlist_action_rename">Переименовать</string>
+    <string name="dialog_create_playlist_create">Создать</string>
+    <string name="dialog_cancel">Отмена</string>
+    <string name="dialog_rename_text">Установить новое имя для плейлиста</string>
+    <string name="dialog_rename">Переименовать</string>
+    <string name="dialog_remove_not_in_pl">Отсутствует в плейлисте</string>
+    <string name="dialog_remove">Выбрать плейлист</string>
+    <string name="dialog_create_playlist_notext">Ввести название</string>
+    <string name="playlist">Плейлист</string>
+    <string name="playlist_dialog">Создать новый плейлист</string>
+    <string name="playlist_dialog_hint">Название</string>
+    <string name="playlist_station_counter_singular">станция</string>
+    <string name="playlist_station_counter_plural">станции</string>
+    <string name="playlist_create">Создать плейлист</string>
+    <string name="playlist_empty_state_main_text">Нет плейлистов</string>
+    <string name="playlist_empty_state_explanation_text">Создайте новый плейлист, нажав кнопку со знаком плюс</string>
+    <string name="playlist_empty_state_stations_main_text">Нет содержимого</string>
+    <string name="playlist_empty_state_stations_explanation_text">Вы можете добавить станцию по своему желанию, прокрутив строку станций слева и нажав кнопку плейлиста</string>
+    <string name="fragment_search">Поиск</string>
+    <string name="fragment_search_stations">СТАНЦИИ</string>
+    <string name="fragment_search_countries">СТРАНЫ</string>
+    <string name="fragment_search_noresults">Нет результатов поиска</string>
+    <string name="action_settings">Настройки</string>
+    <string name="connection_checker_airplane_mode">Отключить автономный режим</string>
+    <string name="connection_checker_wifi_notcnctd">Подключиться к сети Wi-Fi</string>
+    <string name="connection_checker_no_wifi">Включите Wi-Fi для подключения к трансляции</string>
+    <string name="notification_posted">Отправлено сообщение</string>
+    <string name="sleep_timer_title">Таймер автовыключения</string>
+    <string name="sleep_timer_text">Нажмите для отмены таймера автовыключения</string>
+    <string name="coda_share_text">Посетите сайт Coda! Загрузить приложение:</string>
+    <string name="coda_share_via">Поделиться Coda через</string>
+
+    <string name="country_austria">Австрия</string>
+    <string name="country_belarus">Беларусь</string>
+    <string name="country_belgium">Бельгия</string>
+    <string name="country_bulgaria">Болгария</string>
+    <string name="country_croatia">Хорватия</string>
+    <string name="country_czechrepublic">Чехия</string>
+    <string name="country_denmark">Дания</string>
+    <string name="country_estonia">Эстония</string>
+    <string name="country_finland">Финляндия</string>
+    <string name="country_france">Франция</string>
+    <string name="country_germany">Германия</string>
+    <string name="country_greece">Греция</string>
+    <string name="country_hungary">Венгрия</string>
+    <string name="country_ireland">Ирландия</string>
+    <string name="country_italy">Италия</string>
+    <string name="country_latvia">Латвия</string>
+    <string name="country_lithuania">Литва</string>
+    <string name="country_luxembourg">Люксембург</string>
+    <string name="country_macedonia">Македония</string>
+    <string name="country_netherlands">Нидерланды</string>
+    <string name="country_norway">Норвегия</string>
+    <string name="country_poland">Польша</string>
+    <string name="country_russia">Россия</string>
+    <string name="country_slovakia">Словакия</string>
+    <string name="country_slovenia">Словения</string>
+    <string name="country_spain">Испания</string>
+    <string name="country_sweden">Швеция</string>
+    <string name="country_switzerland">Швейцария</string>
+    <string name="country_ukraine">Украина</string>
+    <string name="country_unitedkingdom">Великобритания</string>
+    <string name="country_usa">Соединенные Штаты</string>
+
+    <string-array name="usa_synonyms">
+        <item>USA</item>
+        <item>США</item>
+        <item>Америка</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>Англия</item>
+        <item>Британия</item>
+    </string-array>
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

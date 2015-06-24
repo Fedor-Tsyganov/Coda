@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewSortDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/settings_dialog_sort"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSortDialog"
+        android:layout_margin="15dp">
+        <RadioGroup
+            android:id="@+id/radioGroupSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RadioButton
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_margin="2dp"
+            android:id="@+id/radioButtonStationAZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/settings_dialog_sort_stations_az"
+            />
+
+        <RadioButton
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_margin="2dp"
+            android:id="@+id/radioButtonStationZA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButtonStationAZ"
+            android:text="@string/settings_dialog_sort_stations_za"
+            />
+
+        <RadioButton
+            android:layout_margin="2dp"
+            android:id="@+id/radioButtonCountryAZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButtonStationZA"
+            android:text="@string/settings_dialog_sort_countries_az"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
+
+        <RadioButton
+            android:layout_margin="2dp"
+            android:id="@+id/radioButtonCountryZA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButtonCountryAZ"
+            android:text="@string/settings_dialog_sort_countries_za"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            />
+        </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>

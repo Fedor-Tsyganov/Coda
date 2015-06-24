@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="coda_metadata_station">station</string>
+
+    <string name="coda_metadata_country">country</string>
+
+    <string name="coda_metadata_genre">genre</string>
+
+</resources>

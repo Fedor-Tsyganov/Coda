@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_deep_dark">#275176</color>
+    <color name="white">#ffffff</color>
+    <color name="white_dark">#f2f2f2</color>
+    <color name="white_darker">#FCFCFC</color>
+    <color name="blue_darkest">#0B3390</color>
+    <color name="blue_dark">#143c9a</color>
+    <color name="blue_light">#4c9ee4</color>
+    <color name="blue_light_transparent">#E64c9ee4</color>
+    <color name="pink_search">#e402c8</color>
+    <color name="pink_dark">#AD1457</color>
+    <color name="pink_light">#F06292</color>
+    <color name="black">#000000</color>
+    <color name="black_transparent">#B3000000</color>
+    <color name="grey_dark">#333333</color>
+    <color name="grey_light">#727272</color>
+    <color name="grey_lightes">#888888</color>
+    <color name="grey_light_transparent">#F2D0D0D0</color>
+    <color name="green">#64911c</color>
+    <color name="grey_cancel_button">#40000000</color>
+    <color name="grey_cancel_lightes">#59000000</color>
+    <!--
+    alpha hex values
+        100% — FF
+        95% — F2
+        90% — E6
+        85% — D9
+        80% — CC
+        75% — BF
+        70% — B3
+        65% — A6
+        60% — 99
+        55% — 8C
+        50% — 80
+        45% — 73
+        40% — 66
+        35% — 59
+        30% — 4D
+        25% — 40
+        20% — 33
+        15% — 26
+        10% — 1A
+        5% — 0D
+        0% — 00
+        -->
+</resources>

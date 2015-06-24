@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    android:id="@+id/radio_animation" android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/f_0" android:duration="0" />
+    <item android:drawable="@drawable/f_1" android:duration="100" />
+    <item android:drawable="@drawable/f_2" android:duration="100" />
+    <item android:drawable="@drawable/f_3" android:duration="100" />
+    <item android:drawable="@drawable/f_4" android:duration="100" />
+    <item android:drawable="@drawable/f_5" android:duration="100" />
+    <item android:drawable="@drawable/f_6" android:duration="100" />
+    <item android:drawable="@drawable/f_7" android:duration="100" />
+    <item android:drawable="@drawable/f_8" android:duration="100" />
+    <item android:drawable="@drawable/f_9" android:duration="100" />
+    <item android:drawable="@drawable/f_10" android:duration="100" />
+    <item android:drawable="@drawable/f_11" android:duration="100" />
+    <item android:drawable="@drawable/f_12" android:duration="100" />
+
+</animation-list>

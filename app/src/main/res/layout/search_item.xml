@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textViewSearchItem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:text="MENU"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:gravity="left|center_vertical"
+        />
+
+
+</RelativeLayout>

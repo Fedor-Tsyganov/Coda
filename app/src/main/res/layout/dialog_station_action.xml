@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+        <RelativeLayout
+            android:id="@+id/rlSettingsButtons"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/dialog_playlist">
+
+            <Button
+                android:id="@+id/btnDeleteStation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/black"
+                android:text="@string/dialog_playlist_action_delete"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/btnCancelStation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/btnDeleteStation"
+                android:textColor="@color/black"
+                android:text="@string/dialog_cancel"
+                android:background="@drawable/btn_cancel_full_s_selector"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:background="@android:color/transparent"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivStationName"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

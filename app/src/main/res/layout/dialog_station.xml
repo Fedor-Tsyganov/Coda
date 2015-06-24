@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlDialogStations"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_dialog"
+                >
+    <ImageView
+        android:layout_margin="5dp"
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewStations"
+        android:layout_above="@+id/lButtons"
+        android:scrollbars="none"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:layout_below="@+id/listViewStations"/>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/lButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bCANCEL"
+            android:background="@drawable/btn_cancel_full_b_selector"
+            android:textColor="@color/white"
+            android:text="@string/dialog_stations"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"/>
+        </LinearLayout>
+
+
+</RelativeLayout>

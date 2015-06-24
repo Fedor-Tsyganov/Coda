@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/dialog_playlist"
+                android:layout_marginRight="25dp">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/playlist_dialog"
+        android:textColor="@color/grey_dark"
+        android:id="@+id/textViewCreatePlaylistDialog"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/editTextPlaylist"
+        android:layout_below="@+id/textViewCreatePlaylistDialog"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:maxLength="40"
+        android:hint="@string/playlist_dialog_hint"
+        android:singleLine="true"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/editTextPlaylist"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp"
+
+        >
+
+        <Button
+            android:id="@+id/btnCreatePLCancel"
+            android:textColor="@color/black"
+            android:text="@string/dialog_cancel"
+            android:background="@drawable/button_cancel_left_selector"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:src="@color/white_dark"
+            android:background="@color/grey_cancel_button"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:id="@+id/btnCreatePLRename"
+            android:textColor="@color/black"
+            android:text="@string/dialog_create_playlist_create"
+            android:background="@drawable/button_rename_selector"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

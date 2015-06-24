@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Playlister</string>
+    <string name="drawer_settings">Indstillinger</string>
+    <string name="drawer_all">Alle stationer</string>
+    <string name="drawer_search">Søgen</string>
+    <string name="drawer_dance">Dansemusik</string>
+    <string name="drawer_hiphop">hiphop</string>
+    <string name="drawer_jazz">Jazz</string>
+    <string name="drawer_classic">Klassisk musik</string>
+    <string name="drawer_top_forty">40 bedste hits</string>
+    <string name="drawer_oldies">Gamle hits</string>
+    <string name="drawer_contemporary">Moderne musik</string>
+    <string name="drawer_lounge">Lounge musik</string>
+    <string name="drawer_rock">Rock</string>
+    <string name="drawer_alternative">Blød rock</string>
+    <string name="drawer_student">Studentermusik</string>
+    <string name="drawer_country">Oldtime</string>
+    <string name="button_dialog_radios">Annullering</string>
+    <string name="settings_wifi">Udsendelse kun via Wi-Fi</string>
+    <string name="settings_share">Del indlægget</string>
+    <string name="settings_playlist">Sortér playlister</string>
+    <string name="settings_sort">Sortér radiostationer</string>
+    <string name="settings_timer">Indstil sleeptimer</string>
+    <string name="settings_alarm_days">Indstil dage på vækkeuret</string>
+    <string name="settings_about">Oplysninger om programmet</string>
+    <string name="station_name">Titel</string>
+    <string name="station_country">Land</string>
+    <string name="station_genre">Genre</string>
+    <string name="settings_dialog_wifi">For at formindske betalingsudgifterne på servicen tænd ikke programudsendelser via mobilnetværket</string>
+    <string name="settings_dialog_set_timer">Indstil indslumringstimer og sov under sød musik</string>
+    <string name="settings_dialog_sort">Sortér en liste over radiostationer</string>
+    <string name="settings_dialog_sort_stations_az">Efter stationens navn fra A til Å</string>
+    <string name="settings_dialog_sort_stations_za">Efter stationens navn fra Å til A</string>
+    <string name="settings_dialog_sort_countries_az">Efter landets navn fra A til Å</string>
+    <string name="settings_dialog_sort_countries_za">Efter landets navn fra Å til A</string>
+    <string name="settings_dialog_sort_choice_stations_az">vælg: radiostationer fra A til Å</string>
+    <string name="settings_dialog_sort_choice_stations_za">vælg: radiostationer fra A til Å</string>
+    <string name="settings_dialog_sort_choice_countries_az">vælg: land fra A til Å</string>
+    <string name="settings_dialog_sort_choice_countries_za">vælg: land fra A til Å</string>
+    <string name="alarm_notification_title">Vækkeur</string>
+    <string name="alarm_notification_big_text">Tænding af timer</string>
+    <string name="alarm_notification_text">Tryk på meddelelsen for at annullere</string>
+    <string name="dialog_alarm">Indstil vækkeuret</string>
+    <string name="dialog_close">Luk</string>
+    <string name="dialog_set_timer">Opret en timer</string>
+    <string name="dialog_timer_min">min (minutter)</string>
+    <string name="dialog_stations">ANNULLERING</string>
+    <string name="dialog_playlist_action">Vælg en handling</string>
+    <string name="dialog_playlist_action_add">Tilføj til playlisten</string>
+    <string name="dialog_playlist_action_remove">Fjern fra playlisten</string>
+    <string name="dialog_playlist_action_delete">Fjern</string>
+    <string name="dialog_playlist_action_rename">Angiv et andet navn</string>
+    <string name="dialog_create_playlist_create">Lav</string>
+    <string name="dialog_cancel">Annullering</string>
+    <string name="dialog_rename_text">Lav en ny titel på playlisten</string>
+    <string name="dialog_rename">Angiv et andet navn</string>
+    <string name="dialog_remove_not_in_pl">Findes ikke på playlisten</string>
+    <string name="dialog_remove">Vælg en playliste</string>
+    <string name="dialog_create_playlist_notext">Indtast en titel</string>
+    <string name="playlist">Playliste</string>
+    <string name="playlist_dialog">Lav en ny playliste</string>
+    <string name="playlist_dialog_hint">Titel</string>
+    <string name="playlist_station_counter_singular">stationer</string>
+    <string name="playlist_station_counter_plural">station</string>
+    <string name="playlist_create">Lav en playliste</string>
+    <string name="playlist_empty_state_main_text">Der er ingen playlister</string>
+    <string name="playlist_empty_state_explanation_text">Lav en ny playliste ved at trykke på plus-knappen</string>
+    <string name="playlist_empty_state_stations_main_text">Intet indhold</string>
+    <string name="playlist_empty_state_stations_explanation_text">Du kan tilføje en station efter dit ønske ved at rotere linjen af stationer fra venstre og ved at trykke på knappen af playlisten</string>
+    <string name="fragment_search">Søgen</string>
+    <string name="fragment_search_stations">STATIONER</string>
+    <string name="fragment_search_countries">LANDE</string>
+    <string name="fragment_search_noresults">Ingen søgeresultater</string>
+    <string name="action_settings">Indstillinger</string>
+    <string name="connection_checker_airplane_mode">Afbrud autonom indstilling</string>
+    <string name="connection_checker_wifi_notcnctd">Tilslut til Wi-Fi</string>
+    <string name="connection_checker_no_wifi">Tænd for Wi-Fi for at blive tilsluttet til udsendeler</string>
+    <string name="notification_posted">Meddelelser er blevet sendt</string>
+    <string name="sleep_timer_title">Sleeptimer</string>
+    <string name="sleep_timer_text">Tryk for at ophæve indslumringstimer</string>
+    <string name="coda_share_text">Besøg hjemmesiden Coda! Download et indlæg:</string>
+    <string name="coda_share_via">Del Coda via</string>
+
+    <string name="country_austria">Østrig</string>
+    <string name="country_belarus">Hviderusland</string>
+    <string name="country_belgium">Belgien</string>
+    <string name="country_bulgaria">Bulgarien</string>
+    <string name="country_croatia">Kroatien</string>
+    <string name="country_czechrepublic">Tjekkiet</string>
+    <string name="country_denmark">Danmark</string>
+    <string name="country_estonia">Estland</string>
+    <string name="country_finland">Finland</string>
+    <string name="country_france">Frankrig</string>
+    <string name="country_germany">Tyskland</string>
+    <string name="country_greece">Grækenland</string>
+    <string name="country_hungary">Ungarn</string>
+    <string name="country_ireland">Irland</string>
+    <string name="country_italy">Italien</string>
+    <string name="country_latvia">Letland</string>
+    <string name="country_lithuania">Litauen</string>
+    <string name="country_luxembourg">Luxembourg</string>
+    <string name="country_macedonia">Makedonien</string>
+    <string name="country_netherlands">Nederlandene</string>
+    <string name="country_norway">Norge</string>
+    <string name="country_poland">Polen</string>
+    <string name="country_russia">Rusland</string>
+    <string name="country_slovakia">Slovakiet</string>
+    <string name="country_slovenia">Slovenien</string>
+    <string name="country_spain">Spanien</string>
+    <string name="country_sweden">Sverige</string>
+    <string name="country_switzerland">Schweiz</string>
+    <string name="country_ukraine">Ukraine</string>
+    <string name="country_unitedkingdom">Storbritannien</string>
+    <string name="country_usa">USA</string>
+
+    <string-array name="usa_synonyms">
+        <item>United States</item>
+        <item>America</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>England</item>
+        <item>The Great Britain</item>
+        <item>Britain</item>
+    </string-array>
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

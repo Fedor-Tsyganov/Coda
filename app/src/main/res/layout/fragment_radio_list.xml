@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/mainpanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"/>
+    <FrameLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainpanel"
+        >
+        <com.fedortsyganov.iptest.swipemenulist.SwipeMenuListView
+            android:id="@+id/listRadioStations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_darker"
+            android:divider="@drawable/radio_list_divider"
+            android:dividerHeight="2px"
+            android:headerDividersEnabled="false"
+            android:footerDividersEnabled="false"
+            android:clipToPadding="false"
+            />
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/max_height_header">
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>

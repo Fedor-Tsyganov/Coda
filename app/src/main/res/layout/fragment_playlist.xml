@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rlPLContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_darker"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:text="@string/playlist_empty_state_stations_main_text"
+            android:id="@+id/textViewPlaylistEmptyStateMain"
+            android:textColor="@color/grey_dark"
+            android:textStyle="bold"
+            android:alpha="0.9"
+            android:layout_above="@+id/tvPlaylistEmptyStateExplanation"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="@string/playlist_empty_state_stations_explanation_text"
+            android:id="@+id/tvPlaylistEmptyStateExplanation"
+            android:textColor="@color/grey_dark"
+            android:alpha="0.7"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <VideoView
+            android:layout_below="@+id/tvPlaylistEmptyStateExplanation"
+            android:id="@+id/videoViewTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listViewCurrentPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/radio_list_divider"
+        android:dividerHeight="2px"
+        android:background="@color/white"
+        >
+    </ListView>
+</RelativeLayout>

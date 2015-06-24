@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Λίστες αναπαραγωγής</string>
+    <string name="drawer_settings">Ρυθμίσεις</string>
+    <string name="drawer_all">Όλοι οι σταθμοί</string>
+    <string name="drawer_search">Αναζήτηση</string>
+    <string name="drawer_dance">Χορευτική</string>
+    <string name="drawer_hiphop">Χιπ χοπ</string>
+    <string name="drawer_jazz">Τζαζ</string>
+    <string name="drawer_classic">Κλασική</string>
+    <string name="drawer_top_forty">40 καλύτερες επιτυχίες</string>
+    <string name="drawer_oldies">Παλιές επιτυχίες</string>
+    <string name="drawer_contemporary">Σύγχρονη</string>
+    <string name="drawer_lounge">Lounge</string>
+    <string name="drawer_rock">Ροκ</string>
+    <string name="drawer_alternative">Alternative</string>
+    <string name="drawer_student">Φοιτητική</string>
+    <string name="drawer_country">Κάντρι</string>
+    <string name="button_dialog_radios">Ακύρωση</string>
+    <string name="settings_wifi">Μετάδοση μόνο μέσω Wi-Fi</string>
+    <string name="settings_share">Μοιραστείτε την εφαρμογή</string>
+    <string name="settings_playlist">Ταξινόμηση λιστών αναπαραγωγής</string>
+    <string name="settings_sort">Ταξινόμηση ραδιοφωνικών σταθμών</string>
+    <string name="settings_timer">Ρύθμιση του χρονοδιακόπτη αυτόματης απενεργοποίησης</string>
+    <string name="settings_alarm_days">Ρύθμιση ημερών ξυπνητηριού</string>
+    <string name="settings_about">Πληροφορίες για το πρόγραμμα</string>
+    <string name="station_name">Τίτλος</string>
+    <string name="station_country">Χώρα</string>
+    <string name="station_genre">Είδος</string>
+    <string name="settings_dialog_wifi">Για τη μείωση των εξόδων για την παροχή των υπηρεσιών σύνδεσης μην ανοίγετε τη μετάδοση μέσω διχτύων κινητής τηλεφωνίας</string>
+    <string name="settings_dialog_set_timer">Ρυθμίστε το χρονοδιακόπτη αυτόματης απενεργοποίησης και κοιμηθείτε με ευχάριστη μουσική</string>
+    <string name="settings_dialog_sort">Ταξινόμηση λίστας ραδιοφωνικών σταθμών</string>
+    <string name="settings_dialog_sort_stations_az">Με τον τίτλο του ραδιοφωνικού σταθμού από το А έως το Ω</string>
+    <string name="settings_dialog_sort_stations_za">Με τον τίτλο του ραδιοφωνικού σταθμού από το Ω έως το А</string>
+    <string name="settings_dialog_sort_countries_az">Με την ονομασία της χώρας από το А έως το Ω</string>
+    <string name="settings_dialog_sort_countries_za">Με την ονομασία της χώρας από το Ω έως το А</string>
+    <string name="settings_dialog_sort_choice_stations_az">επιλογή: σταθμού από το А έως το Ω</string>
+    <string name="settings_dialog_sort_choice_stations_za">επιλογή: σταθμού από το Ω έως το А</string>
+    <string name="settings_dialog_sort_choice_countries_az">επιλογή: χώρας από το А έως το Ω</string>
+    <string name="settings_dialog_sort_choice_countries_za">επιλογή: χώρας από το Ω έως το А</string>
+    <string name="alarm_notification_title">Ξυπνητήρι</string>
+    <string name="alarm_notification_big_text">Ενεργοποίηση με τον χρονοδιακόπτη</string>
+    <string name="alarm_notification_text">Πατήστε το μήνυμα για ακύρωση</string>
+    <string name="dialog_alarm">Ρύθμιση ξυπνητηριού</string>
+    <string name="dialog_close">Κλείσιμο</string>
+    <string name="dialog_set_timer">Ρύθμιση χρονοδιακόπτη</string>
+    <string name="dialog_timer_min">λεπ (λεπτά)</string>
+    <string name="dialog_stations">ΑΚΥΡΩΣΗ</string>
+    <string name="dialog_playlist_action">Επιλογή ενέργειας</string>
+    <string name="dialog_playlist_action_add">προσθήκη στη λίστα αναπαραγωγής</string>
+    <string name="dialog_playlist_action_remove">διαγραφή από τη λίστα αναπαραγωγής</string>
+    <string name="dialog_playlist_action_delete">Διαγραφή</string>
+    <string name="dialog_playlist_action_rename">Μετονομασία</string>
+    <string name="dialog_create_playlist_create">Δημιουργία</string>
+    <string name="dialog_cancel">Ακύρωση</string>
+    <string name="dialog_rename_text">Ρύθμιση νέου τίτλου για τη λίστα αναπαραγωγής</string>
+    <string name="dialog_rename">Μετονομασία</string>
+    <string name="dialog_remove_not_in_pl">Δεν υπάρχει στη λίστα αναπαραγωγής</string>
+    <string name="dialog_remove">Επιλογή λίστας αναπαραγωγής</string>
+    <string name="dialog_create_playlist_notext">Εισαγωγή τίτλου</string>
+    <string name="playlist">Λίστα αναπαραγωγής</string>
+    <string name="playlist_dialog">Δημιουργία νέας λίστας αναπαραγωγής</string>
+    <string name="playlist_dialog_hint">Τίτλος</string>
+    <string name="playlist_station_counter_singular">σταθμός</string>
+    <string name="playlist_station_counter_plural">σταθμοί</string>
+    <string name="playlist_create">Δημιουργία λίστας αναπαραγωγής</string>
+    <string name="playlist_empty_state_main_text">Δεν υπάρχουν λίστες αναπαραγωγής</string>
+    <string name="playlist_empty_state_explanation_text">Δημιουργήστε νέα λίστα αναπαραγωγής πατώντας το κουμπί με το +</string>
+    <string name="playlist_empty_state_stations_main_text">Δεν υπάρχει περιεχόμενο</string>
+    <string name="playlist_empty_state_stations_explanation_text">Μπορείτε να προσθέσετε το σταθμό που επιθυμείτε κυλώντας τη γραμμή σταθμών αριστερά και πατώντας το κουμπί της λίστας αναπαραγωγής</string>
+    <string name="fragment_search">Αναζήτηση</string>
+    <string name="fragment_search_stations">ΣΤΑΘΜΟΙ</string>
+    <string name="fragment_search_countries">ΧΩΡΕΣ</string>
+    <string name="fragment_search_noresults">Δεν υπάρχουν αποτελέσματα αναζήτησης</string>
+    <string name="action_settings">Ρυθμίσεις</string>
+    <string name="connection_checker_airplane_mode">Απενεργοποίηση αυτόνομης λειτουργίας</string>
+    <string name="connection_checker_wifi_notcnctd">Σύνδεση με Wi-Fi</string>
+    <string name="connection_checker_no_wifi">Ενεργοποιήστε Wi-Fi για σύνδεση στη μετάδοση</string>
+    <string name="notification_posted">Μήνυμα εστάλη</string>
+    <string name="sleep_timer_title">Χρονοδιακόπτης αυτόματης απενεργοποίησης</string>
+    <string name="sleep_timer_text">Πατήστε για ακύρωση χρονοδιακόπτη αυτόματης απενεργοποίησης</string>
+    <string name="coda_share_text">Επισκεφτείτε την ιστοσελίδα Coda! Φόρτωση εφαρμογής:</string>
+    <string name="coda_share_via">Μοιραστείτε Coda μέσω</string>
+
+    <string name="country_austria">Αυστρία</string>
+    <string name="country_belarus">Λευκορωσία</string>
+    <string name="country_belgium">Βέλγιο</string>
+    <string name="country_bulgaria">Η Βουλγαρία</string>
+    <string name="country_croatia">Κροατία</string>
+    <string name="country_czechrepublic">Τσεχική Δημοκρατία</string>
+    <string name="country_denmark">Δανία</string>
+    <string name="country_estonia">της Εσθονίας της</string>
+    <string name="country_finland">Φινλανδία</string>
+    <string name="country_france">Γαλλία</string>
+    <string name="country_germany">Γερμανία</string>
+    <string name="country_greece">Ελλάδα</string>
+    <string name="country_hungary">την Ουγγαρία</string>
+    <string name="country_ireland">Η Ιρλανδία</string>
+    <string name="country_italy">Ιταλία</string>
+    <string name="country_latvia">Λετονία</string>
+    <string name="country_lithuania">τη Λιθουανία</string>
+    <string name="country_luxembourg">Λουξεμβούργο</string>
+    <string name="country_macedonia">Μακεδονία</string>
+    <string name="country_netherlands">Ολλανδία</string>
+    <string name="country_norway">Νορβηγία</string>
+    <string name="country_poland">Πολωνία</string>
+    <string name="country_russia">Ρωσία</string>
+    <string name="country_slovakia">τη Σλοβακία</string>
+    <string name="country_slovenia">Σλοβενία</string>
+    <string name="country_spain">Η Ισπανία</string>
+    <string name="country_sweden">Σουηδία</string>
+    <string name="country_switzerland">Ελβετία</string>
+    <string name="country_ukraine">Ουκρανία</string>
+    <string name="country_unitedkingdom">Ηνωμένο Βασίλειο</string>
+    <string name="country_usa">ΗΠΑ</string>
+
+    <string-array name="usa_synonyms">
+        <item>Ηνωμένες Πολιτείες της Αμερικής</item>
+        <item>Αμερικής</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>η Αγγλία</item>
+        <item>η Μεγάλη Βρετανία</item>
+        <item>η Βρετανία</item>
+    </string-array>
+
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

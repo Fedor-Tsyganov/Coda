@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:id="@+id/frameButtons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TableRow>
+                <TextView
+                    android:id="@+id/tabStations"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/fragment_search_stations"
+                    android:textColor="@color/pink_search"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:id="@+id/tabCountries"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/fragment_search_countries"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/tabline1"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/pink_search"
+                    />
+
+                <ImageView
+                    android:id="@+id/tabline2"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"/>
+            </TableRow>
+        </TableLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/buttonCloseSearch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/icon_close_notification"
+        android:text=""/>
+
+    <FrameLayout
+        android:id="@+id/listview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameButtons"
+        >
+
+        <ListView
+            android:id="@+id/listSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@drawable/settings_divider"
+            android:dividerHeight="1dp"
+            android:clipToPadding="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            />
+    </FrameLayout>
+</RelativeLayout>

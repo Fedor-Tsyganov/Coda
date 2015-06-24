@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+    <RelativeLayout
+        android:id="@+id/rlTextInfo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/textViewTimerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/settings_dialog_set_timer"
+            android:textColor="@color/grey_dark"/>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/rlTextInfo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <com.fedortsyganov.iptest.helpers.CircularSeekBar
+            android:id="@+id/rotationBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:max="60"
+            app:progress="15"
+            app:pointer_color="#AD1457"
+            app:circle_color="#D9727272"
+            app:circle_progress_color="#F094B3"
+            app:pointer_halo_color="#D9F06292"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rlTextInfo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 min"
+            android:textColor="@color/grey_dark"/>
+    </RelativeLayout>
+
+</RelativeLayout>

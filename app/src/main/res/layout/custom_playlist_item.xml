@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:autofit="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageViewPlaylistName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <me.grantland.widget.AutofitTextView
+        android:singleLine="true"
+        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        autofit:minTextSize="8sp"
+        android:text="Radio Station"
+        android:gravity="center_vertical"
+        android:id="@+id/textViewPlaylistName"
+        android:layout_alignTop="@+id/imageViewPlaylistName"
+        android:layout_toRightOf="@+id/imageViewPlaylistName"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/imageViewPlaylistName"
+        android:layout_toLeftOf="@+id/relativeLayoutSettingsBtn"
+        android:layout_toStartOf="@+id/relativeLayoutSettingsBtn"/>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/settings_btn_bkg"
+        android:id="@+id/relativeLayoutSettingsBtn">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/icon_playlist_settings"
+        android:id="@+id/imageViewSettings1"
+        android:alpha="0.8"
+        />
+    </RelativeLayout>
+</RelativeLayout>

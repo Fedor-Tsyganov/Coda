@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IpTest.iml" filepath="$PROJECT_DIR$/IpTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/android-autofittextview-master/android-autofittextview-master.iml" filepath="$PROJECT_DIR$/libraries/android-autofittextview-master/android-autofittextview-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/android-betterpickers-master/android-betterpickers-master.iml" filepath="$PROJECT_DIR$/libraries/android-betterpickers-master/android-betterpickers-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/joda-time-android/joda-time-android.iml" filepath="$PROJECT_DIR$/libraries/joda-time-android/joda-time-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+    </modules>
+  </component>
+</project>

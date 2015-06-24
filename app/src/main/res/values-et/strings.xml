@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Esitusloendid</string>
+    <string name="drawer_settings">Häälestused</string>
+    <string name="drawer_all">Kõik jaamad</string>
+    <string name="drawer_search">Otsing</string>
+    <string name="drawer_dance">Tantsu</string>
+    <string name="drawer_hiphop">Hip-hop</string>
+    <string name="drawer_jazz">Džäss</string>
+    <string name="drawer_classic">Klassika</string>
+    <string name="drawer_top_forty">40 parimat hitti</string>
+    <string name="drawer_oldies">Vanad hitid</string>
+    <string name="drawer_contemporary">Kaasaegne</string>
+    <string name="drawer_lounge">Lounge</string>
+    <string name="drawer_rock">Rock</string>
+    <string name="drawer_alternative">Alternatiivne</string>
+    <string name="drawer_student">Tudengi</string>
+    <string name="drawer_country">Kantri</string>
+    <string name="button_dialog_radios">Tühistamine</string>
+    <string name="settings_wifi">Ülekanne ainult Wi-Fi kaudu</string>
+    <string name="settings_share">Jagada lisaga</string>
+    <string name="settings_playlist">Sorteerida esitusloendeid</string>
+    <string name="settings_sort">Sorteerida raadiojaamasid</string>
+    <string name="settings_timer">Seada automaatse väljalülituse taimeri</string>
+    <string name="settings_alarm_days">Seada äratuskella päevad</string>
+    <string name="settings_about">Teave programmi kohta</string>
+    <string name="station_name">Pealkiri</string>
+    <string name="station_country">Riik</string>
+    <string name="station_genre">Žanr</string>
+    <string name="settings_dialog_wifi">Sideteenuste tasumise kulude vähendamiseks ärge lülitage ülakandeid mobiilsidevõrkude kaudu</string>
+    <string name="settings_dialog_set_timer">Seadke automaatse väljalülituse taimeri ning jääge magama meeldiva muusika saatel</string>
+    <string name="settings_dialog_sort">Sorteerida raadiojaamade nimekirja</string>
+    <string name="settings_dialog_sort_stations_az">Jaama nimetuse järgi alates A kuni Ü</string>
+    <string name="settings_dialog_sort_stations_za">Jaama nimetuse jargi alates Ü kuni A</string>
+    <string name="settings_dialog_sort_countries_az">Riigi nimetuse järgi alates A kuni Ü</string>
+    <string name="settings_dialog_sort_countries_za">Riigi nimetuse järgi alates Ü kuni A</string>
+    <string name="settings_dialog_sort_choice_stations_az">valida: jaamad alates A kuni Ü</string>
+    <string name="settings_dialog_sort_choice_stations_za">valida: jaamad alates Ü kuni A</string>
+    <string name="settings_dialog_sort_choice_countries_az">valida: riik alates A kuni Ü</string>
+    <string name="settings_dialog_sort_choice_countries_za">valida: riik alates Ü kuni A</string>
+    <string name="alarm_notification_title">Äratuskell</string>
+    <string name="alarm_notification_big_text">Taimeri sisselülitamine</string>
+    <string name="alarm_notification_text">Vajutage sõnum tühistamiseks</string>
+    <string name="dialog_alarm">Seada äratuskell</string>
+    <string name="dialog_close">Sulgeda</string>
+    <string name="dialog_set_timer">Seada taimer</string>
+    <string name="dialog_timer_min">min (minutid)</string>
+    <string name="dialog_stations">TÜHISTAMINE</string>
+    <string name="dialog_playlist_action">Valige tegevus</string>
+    <string name="dialog_playlist_action_add">lisada esitusloendisse</string>
+    <string name="dialog_playlist_action_remove">eemaldada esitusloendist</string>
+    <string name="dialog_playlist_action_delete">Eemaldada</string>
+    <string name="dialog_playlist_action_rename">Ümber nimetada</string>
+    <string name="dialog_create_playlist_create">Luua</string>
+    <string name="dialog_cancel">Tühistamine</string>
+    <string name="dialog_rename_text">Seada uus nimi esitusloendi jaoks</string>
+    <string name="dialog_rename">Ümber nimetada</string>
+    <string name="dialog_remove_not_in_pl">Puudub esitusloendis</string>
+    <string name="dialog_remove">Valida esitusloend</string>
+    <string name="dialog_create_playlist_notext">Sisestada nimetus</string>
+    <string name="playlist">Esitusloend</string>
+    <string name="playlist_dialog">Luua uus esitusloend</string>
+    <string name="playlist_dialog_hint">Pealkiri</string>
+    <string name="playlist_station_counter_singular">jaam</string>
+    <string name="playlist_station_counter_plural">jaam</string>
+    <string name="playlist_create">Luua uus esitusloend</string>
+    <string name="playlist_empty_state_main_text">Esitusloendid puuduvad</string>
+    <string name="playlist_empty_state_explanation_text">Looge uus esitusloend, vajutades nuppu plussmärgiga</string>
+    <string name="playlist_empty_state_stations_main_text">Sisu puudub</string>
+    <string name="playlist_empty_state_stations_explanation_text">Te saate lisada jaama oma soovil, keerates jaamade rea vasakul ning vajutades esitusloendi nuppu</string>
+    <string name="fragment_search">Otsing</string>
+    <string name="fragment_search_stations">JAAMAD</string>
+    <string name="fragment_search_countries">RIIGID</string>
+    <string name="fragment_search_noresults">No otsingutulemused</string>
+    <string name="action_settings">Häälestused</string>
+    <string name="connection_checker_airplane_mode">Lülitada välja automaatse režiimi</string>
+    <string name="connection_checker_wifi_notcnctd">Ühendada Wi-Fi võrguga</string>
+    <string name="connection_checker_no_wifi">Lülitage sisse Wi-Fi ülekandega ühendamiseks</string>
+    <string name="notification_posted">Saadetud sõnum</string>
+    <string name="sleep_timer_title">Automaatse väljalülitamise taimer</string>
+    <string name="sleep_timer_text">Vajutage automaatse väljalülitamise taimeri väljalülitamiseks</string>
+    <string name="coda_share_text">Külastage veebilehte Coda! Laadida lisad:</string>
+    <string name="coda_share_via">Jagada Coda kaudu</string>
+
+    <string name="country_austria">Austria</string>
+    <string name="country_belarus">Valgevene</string>
+    <string name="country_belgium">Belgia</string>
+    <string name="country_bulgaria">Bulgaaria</string>
+    <string name="country_croatia">Horvaatia</string>
+    <string name="country_czechrepublic">Tšehhi Vabariik</string>
+    <string name="country_denmark">Taani</string>
+    <string name="country_estonia">Eesti</string>
+    <string name="country_finland">Soome</string>
+    <string name="country_france">France</string>
+    <string name="country_germany">Saksamaa</string>
+    <string name="country_greece">Kreeka</string>
+    <string name="country_hungary">Ungari</string>
+    <string name="country_ireland">Iirimaa</string>
+    <string name="country_italy">Itaalia</string>
+    <string name="country_latvia">Läti</string>
+    <string name="country_lithuania">Leedus</string>
+    <string name="country_luxembourg">Luxembourg</string>
+    <string name="country_macedonia">Makedoonia</string>
+    <string name="country_netherlands">Holland</string>
+    <string name="country_norway">Norra</string>
+    <string name="country_poland">Poola</string>
+    <string name="country_russia">Venemaa</string>
+    <string name="country_slovakia">Slovakkia</string>
+    <string name="country_slovenia">Sloveenia</string>
+    <string name="country_spain">Hispaania</string>
+    <string name="country_sweden">Rootsi</string>
+    <string name="country_switzerland">Šveits</string>
+    <string name="country_ukraine">Ukrainas</string>
+    <string name="country_unitedkingdom">Suurbritannia</string>
+    <string name="country_usa">Ameerika Ühendriigid</string>
+
+    <string-array name="usa_synonyms">
+        <item>USA</item>
+        <item>Ameerika</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>England</item>
+        <item>Inglismaa</item>
+        <item>Britain</item>
+    </string-array>
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

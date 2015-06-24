@@ -1,0 +1,35 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="22dp"
+            android:id="@+id/background_oval_off"
+            android:background="@drawable/toggle_pink_layer" />
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="22dp"
+            android:id="@+id/background_oval_on"
+            android:background="@drawable/toggle_green_layer"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="@dimen/setting_toggle_circle_diameter"
+            android:layout_height="@dimen/setting_toggle_circle_diameter"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/toggleCircleDark"
+            android:background="@drawable/toggle_switch" />
+        <View
+            android:layout_width="@dimen/setting_toggle_circle_diameter"
+            android:layout_height="@dimen/setting_toggle_circle_diameter"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/toggleCirclePink"
+            android:background="@drawable/toggle_switch_pink"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+</merge>

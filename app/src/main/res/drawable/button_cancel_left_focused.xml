@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="0dp"
+        android:color="@color/white" />
+    <gradient
+        android:startColor="@color/grey_cancel_button"
+        android:endColor="@color/grey_cancel_button"
+        />
+    <corners
+        android:topLeftRadius="0.1dp"
+        android:topRightRadius="0.1dp"
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="0.1dp"
+        />
+</shape>

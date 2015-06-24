@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlDialogPlaylistAction"
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent">
+    <RelativeLayout
+        android:id="@+id/rlPlaylistAction"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/dialog_playlist_start">
+
+    <TextView
+        android:id="@+id/tvPlaylistAction"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="@string/dialog_playlist_action"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlDialogPlaylistActionButtons"
+        android:layout_below="@+id/rlPlaylistAction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dialog_playlist">
+
+        <Button
+            android:id="@+id/bPlaylistActionAdd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:text="@string/dialog_playlist_action_add"/>
+        <Button
+            android:id="@+id/bPlaylistActionRemove"
+            android:layout_below="@+id/bPlaylistActionAdd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="@string/dialog_playlist_action_remove"/>
+        <Button
+            android:id="@+id/bPlaylistActionCancel"
+            android:layout_below="@+id/bPlaylistActionRemove"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_cancel_full_s_selector"
+            android:textColor="@color/black"
+            android:text="@string/dialog_stations"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Afspeellijsten</string>
+    <string name="drawer_settings">Instellingen</string>
+    <string name="drawer_all">Alle zenders</string>
+    <string name="drawer_search">Zoeken</string>
+    <string name="drawer_dance">Dansmuziek</string>
+    <string name="drawer_hiphop">Hip-hop</string>
+    <string name="drawer_jazz">Jazz</string>
+    <string name="drawer_classic">Klassieke muziek</string>
+    <string name="drawer_top_forty">Top 40 hits</string>
+    <string name="drawer_oldies">Oude hits</string>
+    <string name="drawer_contemporary">Hedendaagse muziek</string>
+    <string name="drawer_lounge">Loungemuziek</string>
+    <string name="drawer_rock">Rock</string>
+    <string name="drawer_alternative">Alternatieve muziek</string>
+    <string name="drawer_student">Studentenmuziek</string>
+    <string name="drawer_country">Countrymuziek</string>
+    <string name="button_dialog_radios">Annuleren</string>
+    <string name="settings_wifi">Uitgezonden alleen via Wi-Fi</string>
+    <string name="settings_share">De toepassing delen</string>
+    <string name="settings_playlist">Afspeellijsten sorteren</string>
+    <string name="settings_sort">Radiozenders sorteren</string>
+    <string name="settings_timer">De inslaaptimer instellen</string>
+    <string name="settings_alarm_days">Alarmdagen instellen</string>
+    <string name="settings_about">Programma-informatie</string>
+    <string name="station_name">Titel</string>
+    <string name="station_country">Land</string>
+    <string name="station_genre">Genre</string>
+    <string name="settings_dialog_wifi">Om verbindingskosten te verminderen zet zenders niet aan via mobiele netwerken</string>
+    <string name="settings_dialog_set_timer">Stel de sluimertimer in en slap in onder aangename muziek</string>
+    <string name="settings_dialog_sort">Zenderlijst sorteren</string>
+    <string name="settings_dialog_sort_stations_az">Zenders van A tot Z</string>
+    <string name="settings_dialog_sort_stations_za">Zenders van Z tot A</string>
+    <string name="settings_dialog_sort_countries_az">Landen van A tot Z</string>
+    <string name="settings_dialog_sort_countries_za">Landen van Z tot A</string>
+    <string name="settings_dialog_sort_choice_stations_az">kies: een zender van A tot Z</string>
+    <string name="settings_dialog_sort_choice_stations_za">kies: een zender van Z tot A</string>
+    <string name="settings_dialog_sort_choice_countries_az">kies: een land van A tot Z</string>
+    <string name="settings_dialog_sort_choice_countries_za">kies: een land van Z tot A</string>
+    <string name="alarm_notification_title">De wekker</string>
+    <string name="alarm_notification_big_text">Timer aanzetten</string>
+    <string name="alarm_notification_text">Selecteer een bericht om te annuleren</string>
+    <string name="dialog_alarm">De wekker instellen</string>
+    <string name="dialog_close">Afsluiten</string>
+    <string name="dialog_set_timer">De timer instellen</string>
+    <string name="dialog_timer_min">min (minuten)</string>
+    <string name="dialog_stations">ANNULEREN</string>
+    <string name="dialog_playlist_action">Kies een handeling</string>
+    <string name="dialog_playlist_action_add">aan de afspeellijst toevoegen</string>
+    <string name="dialog_playlist_action_remove">uit de afspeellijst verwijderen</string>
+    <string name="dialog_playlist_action_delete">Verwijderen</string>
+    <string name="dialog_playlist_action_rename">Hernoemen</string>
+    <string name="dialog_create_playlist_create">Aanmaken</string>
+    <string name="dialog_cancel">Annuleren</string>
+    <string name="dialog_rename_text">Een nieuwe naam aan de afspeellijst geven</string>
+    <string name="dialog_rename">Hernoemen</string>
+    <string name="dialog_remove_not_in_pl">Afwezig in de afspeellijst</string>
+    <string name="dialog_remove">Een afspeellijst kiezen</string>
+    <string name="dialog_create_playlist_notext">Een titel invoeren</string>
+    <string name="playlist">Afspeellijst</string>
+    <string name="playlist_dialog">Een nieuwe afspeellijst aanmaken</string>
+    <string name="playlist_dialog_hint">Titel</string>
+    <string name="playlist_station_counter_singular">zender</string>
+    <string name="playlist_station_counter_plural">zenders</string>
+    <string name="playlist_create">Een afspeellijst aanmaken</string>
+    <string name="playlist_empty_state_main_text">Geen afspeellijsten</string>
+    <string name="playlist_empty_state_explanation_text">Maak een nieuwe afspeellijst door het knoopje met + teken te selecteren</string>
+    <string name="playlist_empty_state_stations_main_text">Geen inhoud</string>
+    <string name="playlist_empty_state_stations_explanation_text">U kunt een zender naar uw wens toevoegen door de zenderlijst aan de linkerkant te scrollen en het afspeellijstknoopje te selecteren</string>
+    <string name="fragment_search">Zoeken</string>
+    <string name="fragment_search_stations">ZENDERS</string>
+    <string name="fragment_search_countries">LANDEN</string>
+    <string name="fragment_search_noresults">Geen zoekresultaten</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="connection_checker_airplane_mode">Autonoom regime uitschakelen</string>
+    <string name="connection_checker_wifi_notcnctd">Een Wi-Fi netwerk inschakelen</string>
+    <string name="connection_checker_no_wifi">Doe Wi-Fi aan om zich met de zender te verbinden</string>
+    <string name="notification_posted">Er is een bericht verzonden</string>
+    <string name="sleep_timer_title">De inslaaptimer</string>
+    <string name="sleep_timer_text">Selecteer om de werking van de Inslaaptimer te annuleren</string>
+    <string name="coda_share_text">Bezoek eens website Coda! Download de toepassing:</string>
+    <string name="coda_share_via">Deel Coda via</string>
+
+    <string name="country_austria">Oostenrijk</string>
+    <string name="country_belarus">Wit-Rusland</string>
+    <string name="country_belgium">België</string>
+    <string name="country_bulgaria">Bulgarije</string>
+    <string name="country_croatia">Kroatië</string>
+    <string name="country_czechrepublic">Tsjechische Republiek</string>
+    <string name="country_denmark">Denmark</string>
+    <string name="country_estonia">Estland</string>
+    <string name="country_finland">Finland</string>
+    <string name="country_france">France</string>
+    <string name="country_germany">Germany</string>
+    <string name="country_greece">Griekenland</string>
+    <string name="country_hungary">Hongarije</string>
+    <string name="country_ireland">Ierland</string>
+    <string name="country_italy">Italië</string>
+    <string name="country_latvia">Letland</string>
+    <string name="country_lithuania">Litouwen</string>
+    <string name="country_luxembourg">Luxemburg</string>
+    <string name="country_macedonia">Macedonië</string>
+    <string name="country_netherlands">Nederland</string>
+    <string name="country_norway">Noorwegen</string>
+    <string name="country_poland">Polen</string>
+    <string name="country_russia">Rusland</string>
+    <string name="country_slovakia">Slowakije</string>
+    <string name="country_slovenia">Slovenië</string>
+    <string name="country_spain">Spanje</string>
+    <string name="country_sweden">Zweden</string>
+    <string name="country_switzerland">Switzerland</string>
+    <string name="country_ukraine">Oekraïne</string>
+    <string name="country_unitedkingdom">Verenigd Koninkrijk</string>
+    <string name="country_usa">Verenigde Staten</string>
+
+    <string-array name="usa_synonyms">
+        <item>USA</item>
+        <item>Amerika</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>Engeland</item>
+        <item>Groot-Brittannië</item>
+        <item>Britain</item>
+    </string-array>
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

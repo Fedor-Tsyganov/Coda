@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/ivNotificationCover"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/icon_notification_inner"/>
+    <RelativeLayout
+        android:id="@+id/rlNotTop"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/ivNotificationCover"
+        android:layout_toEndOf="@+id/ivNotificationCover"
+        android:background="#322E2E">
+        <TextView
+            android:id="@+id/tvNotifRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio"
+            android:textColor="#ffffff"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/bNotifClose"
+            android:layout_margin="4dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/icon_close_notification"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlNotBot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rlNotTop"
+        android:layout_toRightOf="@+id/ivNotificationCover"
+        android:layout_toEndOf="@+id/ivNotificationCover"
+        android:background="#322E2E">
+        <ImageView
+            android:id="@+id/bNotifBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/last_song_small"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/bNotifPlayStop"
+            android:layout_toStartOf="@+id/bNotifPlayStop"/>
+        <ImageView
+            android:id="@+id/bNotifPlayStop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:id="@+id/bNotifForvard"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/next_song_small"
+            android:layout_alignTop="@+id/bNotifPlayStop"
+            android:layout_toRightOf="@+id/bNotifPlayStop"
+            android:layout_toEndOf="@+id/bNotifPlayStop"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>

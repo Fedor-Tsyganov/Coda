@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+           >
+
+
+    <!-- The apps Analytics Tracking Id -->
+    <string name="ga_trackingId">UA406607643</string>
+
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <string name="ga_appName">CodaApplication</string>
+    <string name="ga_appVersion">1</string>
+
+    <bool name="ga_debug">true</bool>
+
+    <item name="ga_dispatchPeriod" format="integer" type="integer">120</item>
+
+    <string name="ga_sampleFrequency">90</string>
+
+    <bool name="ga_anonymizeIp">true</bool>
+    <bool name="ga_dryRun">false</bool>
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <integer name="ga_sessionTimeout">-1</integer>
+    <!-- If ga_autoActivityTracking is enabled, an alternate screen name can be specified to
+    substitute for the full length canonical Activity name in screen view hit. In order to
+    specify an alternate screen name use an <screenName> element, with the name attribute
+    specifying the canonical name, and the value the alias to use instead. -->
+    <screenName name="com.fedortsyganov.iptest">RadioMainPage</screenName>
+
+</resources>

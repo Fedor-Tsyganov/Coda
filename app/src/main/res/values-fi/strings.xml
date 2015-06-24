@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Soittolistat</string>
+    <string name="drawer_settings">asetukset</string>
+    <string name="drawer_all">kaikki radioasemat</string>
+    <string name="drawer_search">haku</string>
+    <string name="drawer_dance">tanssimusiikki</string>
+    <string name="drawer_hiphop">Hip-hop</string>
+    <string name="drawer_jazz">jazz</string>
+    <string name="drawer_classic">klassinen</string>
+    <string name="drawer_top_forty">40 parasta iskelmää</string>
+    <string name="drawer_oldies">vanhat iskelmät</string>
+    <string name="drawer_contemporary">nykyaikainen</string>
+    <string name="drawer_lounge">lounge-musiikki</string>
+    <string name="drawer_rock">rock</string>
+    <string name="drawer_alternative">vaihtoehtoinen</string>
+    <string name="drawer_student">opiskelijoille</string>
+    <string name="drawer_country">Countrymusiikki</string>
+    <string name="button_dialog_radios">Peruutus</string>
+    <string name="settings_wifi">Lähetystoiminta vain WI-FI-verkon kautta</string>
+    <string name="settings_share">Suositella sovellusta</string>
+    <string name="settings_playlist">Lajittele soittolistoja</string>
+    <string name="settings_sort">Lajittele radioasemat</string>
+    <string name="settings_timer">Aseta automaattinen sammutusajastin</string>
+    <string name="settings_alarm_days">Aseta hälytyspäivät</string>
+    <string name="settings_about">Tietoja ohjelmasta</string>
+    <string name="station_name">Otsikko</string>
+    <string name="station_country">maa</string>
+    <string name="station_genre">laji</string>
+    <string name="settings_dialog_wifi">Älä kytke lähetystoimintaa matkapuhelinverkon kautta viestintäpalveluihin kuuluvien kustannuksien vähentämällä</string>
+    <string name="settings_dialog_set_timer">Aseta ajastimen automaatinen katkaiseminen ja nukahtaa pehmeätä musiikkia</string>
+    <string name="settings_dialog_sort">Lajitella radiokanavaluettelon</string>
+    <string name="settings_dialog_sort_stations_az">radioaseman nimin A-Ö järjestykseen</string>
+    <string name="settings_dialog_sort_stations_za">radioaseman nimin Ö-A järjestykseen</string>
+    <string name="settings_dialog_sort_countries_az">Maan nimin A-Ö järjestykseen</string>
+    <string name="settings_dialog_sort_countries_za">Maan nimin Ö-A järjestykseen</string>
+    <string name="settings_dialog_sort_choice_stations_az">Valitse: radioasema A-Ö</string>
+    <string name="settings_dialog_sort_choice_stations_za">Valitse: radioasema Ö-A</string>
+    <string name="settings_dialog_sort_choice_countries_az">Valitse: maa A-Ö</string>
+    <string name="settings_dialog_sort_choice_countries_za">Valitse: maa Ö-A</string>
+    <string name="alarm_notification_title">herätyskello</string>
+    <string name="alarm_notification_big_text">Ajastimen ottaminen käyttöön</string>
+    <string name="alarm_notification_text">Paina viesti peruuttamiseen</string>
+    <string name="dialog_alarm">Aseta herätyskello</string>
+    <string name="dialog_close">Sulkea</string>
+    <string name="dialog_set_timer">Aseta ajastin</string>
+    <string name="dialog_timer_min">min (minuuttia)</string>
+    <string name="dialog_stations">PERUUTUS</string>
+    <string name="dialog_playlist_action">Valitse toiminta</string>
+    <string name="dialog_playlist_action_add">Lisätä soitolistalle</string>
+    <string name="dialog_playlist_action_remove">Poista soittolistalta</string>
+    <string name="dialog_playlist_action_delete">poistaa</string>
+    <string name="dialog_playlist_action_rename">nimetä uudelleen</string>
+    <string name="dialog_create_playlist_create">luoda</string>
+    <string name="dialog_cancel">peruutus</string>
+    <string name="dialog_rename_text">Määrittää soittolistan uusi nimi</string>
+    <string name="dialog_rename">nimettää uudelleen</string>
+    <string name="dialog_remove_not_in_pl">poistaa soittolistalta</string>
+    <string name="dialog_remove">Valita soittolista</string>
+    <string name="dialog_create_playlist_notext">kirjoittaa nimi</string>
+    <string name="playlist">soittolista</string>
+    <string name="playlist_dialog">Luoda uusi soittolista</string>
+    <string name="playlist_dialog_hint">Otsikko</string>
+    <string name="playlist_station_counter_singular">radioasema</string>
+    <string name="playlist_station_counter_plural">radioasema</string>
+    <string name="playlist_create">Luoda soittolista</string>
+    <string name="playlist_empty_state_main_text">Soitolistat poistuvat</string>
+    <string name="playlist_empty_state_explanation_text">Luo uusi soittolista napsauttamalla plusmerkkiä</string>
+    <string name="playlist_empty_state_stations_main_text">Sisältö poistuu</string>
+    <string name="playlist_empty_state_stations_explanation_text">Voit lisätä radioaseman kanavan mielesi mukaan, vierittäen radioasemien jono vasemmalla ja valiten soittolista</string>
+    <string name="fragment_search">haku</string>
+    <string name="fragment_search_stations">RADIOASEMAT</string>
+    <string name="fragment_search_countries">MAAT</string>
+    <string name="fragment_search_noresults">Ei hakutuloksia</string>
+    <string name="action_settings">Asetukset</string>
+    <string name="connection_checker_airplane_mode">Poista käytöstä offline</string>
+    <string name="connection_checker_wifi_notcnctd">Yhdistää Wi-Fi-verkkoon</string>
+    <string name="connection_checker_no_wifi">Kytke Wi-Fi-yhteyden lähetystoimintaan</string>
+    <string name="notification_posted">Viestin on lähetetty</string>
+    <string name="sleep_timer_title">Ajastimen automaatinen katkaiseminen</string>
+    <string name="sleep_timer_text">Paina ajastimen automaatisen katkaisemisen peruutukseen</string>
+    <string name="coda_share_text">Käy Coda- verkkosivustossa! Ladata sovellus:</string>
+    <string name="coda_share_via">jakautua Coda jonkun kautta</string>
+
+    <string name="country_austria">Itävallassa</string>
+    <string name="country_belarus">Valko-Venäjä</string>
+    <string name="country_belgium">Belgia</string>
+    <string name="country_bulgaria">Bulgaria</string>
+    <string name="country_croatia">kroatia</string>
+    <string name="country_czechrepublic">Tšekki</string>
+    <string name="country_denmark">Tanska</string>
+    <string name="country_estonia">Viro</string>
+    <string name="country_finland">Suomi</string>
+    <string name="country_france">Ranska</string>
+    <string name="country_germany">Saksa</string>
+    <string name="country_greece">Kreikka</string>
+    <string name="country_hungary">Unkarissa</string>
+    <string name="country_ireland">Irlanti</string>
+    <string name="country_italy">Italia</string>
+    <string name="country_latvia">Latvia</string>
+    <string name="country_lithuania">Liettua</string>
+    <string name="country_luxembourg">Luxemburg</string>
+    <string name="country_macedonia">Makedonia</string>
+    <string name="country_netherlands">Alankomaat</string>
+    <string name="country_norway">Norja</string>
+    <string name="country_poland">Puola</string>
+    <string name="country_russia">Venäjä</string>
+    <string name="country_slovakia">slovakia</string>
+    <string name="country_slovenia">Slovenia</string>
+    <string name="country_spain">Espanja</string>
+    <string name="country_sweden">Ruotsi</string>
+    <string name="country_switzerland">Sveitsi</string>
+    <string name="country_ukraine">Ukraina</string>
+    <string name="country_unitedkingdom">Iso-Britannia</string>
+    <string name="country_usa">Yhdysvallat</string>
+
+    <string-array name="usa_synonyms">
+        <item>United States</item>
+        <item>Amerikan</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>England</item>
+        <item>Britannia</item>
+        <item>Britain</item>
+    </string-array>
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coda</string>
+    <string name="About">Hello, this is Coda - not for profit app for listening to the best radio stations.
+        \n\n Fedor Tsyganov \n Founder/Developer/Designer\n \@fedor_tsyganov </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="drawer_playlist">﻿Playlists</string>
+    <string name="drawer_settings">Einstellungen</string>
+    <string name="drawer_all">Alle Funkstationen</string>
+    <string name="drawer_search">Suchlauf</string>
+    <string name="drawer_dance">Tanzmusik</string>
+    <string name="drawer_hiphop">Hip-Hop</string>
+    <string name="drawer_jazz">Jazzmusik</string>
+    <string name="drawer_classic">Klassik</string>
+    <string name="drawer_top_forty">40 beste Hits</string>
+    <string name="drawer_oldies">Alte Hits</string>
+    <string name="drawer_contemporary">Moderne Musik</string>
+    <string name="drawer_lounge">Lounge-Musik</string>
+    <string name="drawer_rock">Rockmusik</string>
+    <string name="drawer_alternative">Alternativmusik</string>
+    <string name="drawer_student">Studentenmusik</string>
+    <string name="drawer_country">Country-Musik</string>
+    <string name="button_dialog_radios">Abbruch</string>
+    <string name="settings_wifi">Übertragung nur über Wi-Fi</string>
+    <string name="settings_share">Applikation weitergeben</string>
+    <string name="settings_playlist">Playlists sortieren</string>
+    <string name="settings_sort">Funkstationen sortieren</string>
+    <string name="settings_timer">Selbstabschaltungstimer einstellen</string>
+    <string name="settings_alarm_days">Wochentage im Wecker einstellen</string>
+    <string name="settings_about">Programminformation</string>
+    <string name="station_name">Titel</string>
+    <string name="station_country">Land</string>
+    <string name="station_genre">Gattung</string>
+    <string name="settings_dialog_wifi">Zur Senkung der Kosten für Bezahlung der mobilen Dienste schalten Sie Übertragung über Mobilfunknetze nicht ein.</string>
+    <string name="settings_dialog_set_timer">Stellen Sie die Selbstabschaltungstimer ein und schlafen Sie mit sanfter Musik ein</string>
+    <string name="settings_dialog_sort">Stationsliste sortieren</string>
+    <string name="settings_dialog_sort_stations_az">Nach Stationsnamen von A bis Z</string>
+    <string name="settings_dialog_sort_stations_za">Nach Stationsnamen von Z bis A</string>
+    <string name="settings_dialog_sort_countries_az">Nach Ländernamen von A bis Z</string>
+    <string name="settings_dialog_sort_countries_za">Nach L ändernamen von Z bis A</string>
+    <string name="settings_dialog_sort_choice_stations_az">Auswählen: Stationen von A bis Z</string>
+    <string name="settings_dialog_sort_choice_stations_za">Auswählen: Stationen von Z bis A</string>
+    <string name="settings_dialog_sort_choice_countries_az">Auswählen: Land von A bis Z</string>
+    <string name="settings_dialog_sort_choice_countries_za">Auswählen: Land von Z bis A</string>
+    <string name="alarm_notification_title">Wecker</string>
+    <string name="alarm_notification_big_text">Timerschaltung</string>
+    <string name="alarm_notification_text">Auf die Nachricht zum Abruf klicken</string>
+    <string name="dialog_alarm">Wecker einstellen</string>
+    <string name="dialog_close">Schlieβen</string>
+    <string name="dialog_set_timer">Timer einstellen</string>
+    <string name="dialog_timer_min">Min. (Minute)</string>
+    <string name="dialog_stations">ABRUF</string>
+    <string name="dialog_playlist_action">Handlung wählen</string>
+    <string name="dialog_playlist_action_add">zur Playlist hinzufügen</string>
+    <string name="dialog_playlist_action_remove">aus Playlist löschen</string>
+    <string name="dialog_playlist_action_delete">Löschen</string>
+    <string name="dialog_playlist_action_rename">Umbenennen</string>
+    <string name="dialog_create_playlist_create">Erstellen</string>
+    <string name="dialog_cancel">Abruf</string>
+    <string name="dialog_rename_text">Einen neuen Namen für die Playlist vergeben</string>
+    <string name="dialog_rename">Umbenennen</string>
+    <string name="dialog_remove_not_in_pl">Fehlt in der Playlist</string>
+    <string name="dialog_remove">Playlist wählen</string>
+    <string name="dialog_create_playlist_notext">Den Namen eingeben</string>
+    <string name="playlist">Playlist</string>
+    <string name="playlist_dialog">Eine neue Playlist erstellen</string>
+    <string name="playlist_dialog_hint">Titel</string>
+    <string name="playlist_station_counter_singular">Funkstation</string>
+    <string name="playlist_station_counter_plural">Funkstationen</string>
+    <string name="playlist_create">Playlist erstellen</string>
+    <string name="playlist_empty_state_main_text">Keine Playlists</string>
+    <string name="playlist_empty_state_explanation_text">Erstellen Sie eine neue Playlist, indem Sie die + Taste drücken</string>
+    <string name="playlist_empty_state_stations_main_text">Kein Inhalt</string>
+    <string name="playlist_empty_state_stations_explanation_text">Sie können die Funkstation nach Ihrem Wunsch hinzufügen, indem Sie die Stationszeile links scrollen und die Playlist-Taste drücken</string>
+    <string name="fragment_search">Suchlauf</string>
+    <string name="fragment_search_stations">FUNKSTATIONEN</string>
+    <string name="fragment_search_countries">LÄNDER</string>
+    <string name="fragment_search_noresults">Keine Suchergebnisse</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="connection_checker_airplane_mode">Offline-Modus abschalten</string>
+    <string name="connection_checker_wifi_notcnctd">Wi-Fi anschalten</string>
+    <string name="connection_checker_no_wifi">Wi-Fi für Übertragung einschalten</string>
+    <string name="notification_posted">Nachricht abgeschickt</string>
+    <string name="sleep_timer_title">Selbstabschaltungstimer</string>
+    <string name="sleep_timer_text">Zum Abruf des Selbstabschaltungstimers drücken</string>
+    <string name="coda_share_text">Besuchen Sie die Coda - Webseite! Anwendung downloaden:</string>
+    <string name="coda_share_via">Coda weitergeben über</string>
+
+    <string name="country_austria">Österreich</string>
+    <string name="country_belarus">Belarus</string>
+    <string name="country_belgium">Belgien</string>
+    <string name="country_bulgaria">Bulgarien</string>
+    <string name="country_croatia">Kroatien</string>
+    <string name="country_czechrepublic">Tschechien</string>
+    <string name="country_denmark">Dänemark</string>
+    <string name="country_estonia">Estland</string>
+    <string name="country_finland">Finnland</string>
+    <string name="country_france">Frankreich</string>
+    <string name="country_germany">Deutschland</string>
+    <string name="country_greece">Griechenland</string>
+    <string name="country_hungary">Ungarn</string>
+    <string name="country_ireland">Irland</string>
+    <string name="country_italy">Italien</string>
+    <string name="country_latvia">Lettland</string>
+    <string name="country_lithuania">Litauen</string>
+    <string name="country_luxembourg">Luxemburg</string>
+    <string name="country_macedonia">Mazedonien</string>
+    <string name="country_netherlands">Niederlande</string>
+    <string name="country_norway">Norwegen Österreich</string>
+    <string name="country_poland">Polen</string>
+    <string name="country_russia">Russland</string>
+    <string name="country_slovakia">Slowakei</string>
+    <string name="country_slovenia">Slowenien</string>
+    <string name="country_spain">Spanien</string>
+    <string name="country_sweden">Schweden</string>
+    <string name="country_switzerland">Schweiz</string>
+    <string name="country_ukraine">Ukraine</string>
+    <string name="country_unitedkingdom">Vereinigtes Königreich</string>
+    <string name="country_usa">Vereinigte Staaten</string>
+
+    <string-array name="usa_synonyms">
+        <item>USA</item>
+        <item>United States</item>
+        <item>America</item>
+    </string-array>
+
+    <string-array name="unitedkingdom_synonyms">
+        <item>UK</item>
+        <item>England</item>
+        <item>Großbritannien</item>
+        <item>Britain</item>
+    </string-array>
+
+
+    <!-- Do not translate below -->
+    <string name="title_activity_radio_list">RadioListActivity</string>
+    <string name="title_activity_radio_player">RadioPlayerActivity</string>
+    <string name="preferences_key">com.tsyganov.iptest.togglebutton</string>
+    <string name="preferences_wifi">com.tsyganov.iptest.wifi</string>
+    <string name="preferences_sort_az">com.tsyganov.iptest.sortaz</string>
+    <string name="preferences_sort_za">com.tsyganov.iptest.sortza</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8544663458859969/7667458938</string>
+    <string name="google_analytics_tracking_id">UA-40660764-3</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="coda_meta_data_num">la-nas-ppd-8347959503</string>
+    <!-- Do not translate above -->
+    <string name="title_activity_chat_test">ChatTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- Do not translate above -->
+    <string name="version">Version 1.0</string>
+    <string name="libraries_used">Libraries used in application:
+        \n\t- android-betterpickers
+        \n\t- android-autofittextview
+        \n\t- circularseekbar
+        \n\t- SwipeMenuListView
+        \n\t- TextDrawable
+        \n\t- StikkyHeader</string>
+    <string name="icon_credit">Stations icon created by Dmitry Mamaev</string>
+</resources>

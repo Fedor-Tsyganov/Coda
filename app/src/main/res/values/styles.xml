@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="RadioPlayer" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="CustomDialogAnimation" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+    <style name="DialogAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_from_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_to_bot</item>
+    </style>
+
+</resources>
