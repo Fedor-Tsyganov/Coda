@@ -14,7 +14,6 @@ import android.os.Build;
 import com.fedortsyganov.iptest.R;
 import com.fedortsyganov.iptest.RadioMainPageActivity;
 import com.fedortsyganov.iptest.RadioPlayerActivity;
-import com.fedortsyganov.iptest.receivers.RadioAlarmReceiver;
 
 /**
  * Created by fedortsyganov on 5/25/15.
@@ -28,6 +27,7 @@ public class NotificationControls
     private static final String NEXT_STATION = "com.fedortsyganov.iptest.NEXT_STATION";
     private static final String STOP_PLAY = "com.fedortsyganov.iptest.STOP_PLAY";
     private static final String TAG = "MediaNotification";
+    private static final int NOTIFICATION_ID = 101;
     //shared preferences file string
     private Context con;
 
@@ -93,12 +93,12 @@ public class NotificationControls
         notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (num %2 == 0)
-            notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
-        else
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        else
+            notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
         //notification.flags |= Notification.FLAG_NO_CLEAR;
 
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(21)
@@ -128,17 +128,19 @@ public class NotificationControls
                 .setDefaults(0)
                 .setWhen(0)
                         //.setColor(getResources().getColor(R.color.blue_dark))
-                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(new int[] {0, 1, 2}))
+                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(0, 1, 2))
                 .build();
 
         notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        //was in reverse!
         if (num %2 == 0)
-            notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
-        else
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        else
+            notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
 
 
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     //api 21 notification builder

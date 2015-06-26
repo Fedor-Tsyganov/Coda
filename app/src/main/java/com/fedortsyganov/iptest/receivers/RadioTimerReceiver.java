@@ -1,6 +1,5 @@
 package com.fedortsyganov.iptest.receivers;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlarmManager;
 import android.app.Notification;
@@ -31,6 +30,10 @@ public class RadioTimerReceiver extends BroadcastReceiver
     private PendingIntent pendingIntent;
     private NotificationManager notificationManager;
     private Intent mIntent;
+    private static final String TAG = "MediaNotification";
+    private static final String TIMER_TAG = "TimerNotification";
+    private static final int NOTIFICATION_ID = 101;
+    private static final int TIMER_ID = 52;
 
     @Override
     public void onReceive(Context context, Intent intent)
@@ -41,7 +44,7 @@ public class RadioTimerReceiver extends BroadcastReceiver
         {
             timerManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             Intent cancelIntent = new Intent(context, RadioTimerReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(context, 52, cancelIntent, PendingIntent.FLAG_CANCEL_CURRENT );
+            pendingIntent = PendingIntent.getBroadcast(context, TIMER_ID, cancelIntent, PendingIntent.FLAG_CANCEL_CURRENT );
             timerManager.cancel(pendingIntent);
         }
         else
@@ -64,8 +67,8 @@ public class RadioTimerReceiver extends BroadcastReceiver
                 RadioPlayerActivity.bPlay.setChecked(false);
                 context.stopService(intent);
                 notificationManager = (NotificationManager) (con.getSystemService(Context.NOTIFICATION_SERVICE));
-                notificationManager.cancel(01);
-                notificationManager.cancel(52);
+                notificationManager.cancel(TAG, NOTIFICATION_ID);
+                notificationManager.cancel(TIMER_TAG, TIMER_ID);
             }
             mIntent = new Intent(Intent.ACTION_MAIN);
             mIntent.addCategory(Intent.CATEGORY_HOME);
@@ -78,7 +81,7 @@ public class RadioTimerReceiver extends BroadcastReceiver
     {
         timerManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, RadioTimerReceiver.class);
-        pendingIntent = PendingIntent.getBroadcast(context, 52, intent, 0);
+        pendingIntent = PendingIntent.getBroadcast(context, TIMER_ID, intent, 0);
         Calendar calendar = Calendar.getInstance();
         DateTime now = DateTime.now();
         int minNow = now.getMinuteOfHour();
@@ -132,7 +135,7 @@ public class RadioTimerReceiver extends BroadcastReceiver
 
         //used to be 32
         PendingIntent pendingIntentCancelTimer
-                = PendingIntent.getBroadcast(context.getApplicationContext(), 52, cancelTimerIntent, PendingIntent.FLAG_CANCEL_CURRENT);
+                = PendingIntent.getBroadcast(context.getApplicationContext(), TIMER_ID, cancelTimerIntent, PendingIntent.FLAG_CANCEL_CURRENT);
         // Build notification
         // Actions are just fake
         Notification noti = new Notification.Builder(context.getApplicationContext())
@@ -142,12 +145,12 @@ public class RadioTimerReceiver extends BroadcastReceiver
                 .setContentIntent(pendingIntentCancelTimer)
                 .addAction(android.R.color.transparent, context.getString(R.string.dialog_cancel), pendingIntentCancelTimer)
                 .build();
-        NotificationManager notificationManager = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         // hide the notification after its selected
         noti.flags |= Notification.FLAG_AUTO_CANCEL;
 
         //33
-        notificationManager.notify(52, noti);
+        notificationManager.notify(TIMER_TAG, TIMER_ID, noti);
 
     }
 }

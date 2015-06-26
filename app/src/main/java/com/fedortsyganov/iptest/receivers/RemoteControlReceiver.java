@@ -32,6 +32,8 @@ public class RemoteControlReceiver extends BroadcastReceiver
     private static final String STOP_PLAY = "com.fedortsyganov.iptest.STOP_PLAY";
     private static final String STATION_TO_SAVE = "info";
     private static final String NOTIFICATION_CONTROLS = "NotificationCont";
+    private static final String TAG = "MediaNotification";
+    private static final int NOTIFICATION_ID = 101;
     private NotificationManager notificationManager;
     private Notification notification;
     public SharedPreferences preferences;
@@ -43,12 +45,12 @@ public class RemoteControlReceiver extends BroadcastReceiver
         con = context;
         startRadioIntent = new Intent(con, MusicService.class);
         startRadioIntent.putExtra("SERVICE","START");
-        preferences = context.getSharedPreferences(STATION_TO_SAVE, context.MODE_PRIVATE);
+        preferences = context.getSharedPreferences(STATION_TO_SAVE, Context.MODE_PRIVATE);
         prefEditor = preferences.edit();
 
         if (Intent.ACTION_MEDIA_BUTTON.equals(intent.getAction()))
         {
-            KeyEvent event = (KeyEvent)intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
+            KeyEvent event = intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
 
             if (KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE == event.getKeyCode())
             {
@@ -204,6 +206,35 @@ public class RemoteControlReceiver extends BroadcastReceiver
             FragmentRadioList.adapter.notifyDataSetChanged();
     }
 
+    @TargetApi(14)
+    public void createNotificationAPI14()
+    {
+        Intent nextReceive = new Intent();
+        Intent previousReceive = new Intent();
+        Intent stopPlayReceive = new Intent();
+
+        nextReceive.setAction(NEXT_STATION);
+        previousReceive.setAction(PREVIOUS_STATION);
+        stopPlayReceive.setAction(STOP_PLAY);
+
+        Bitmap mBitmap = BitmapFactory.decodeResource(con.getResources(), R.drawable.notification_icon_small_coda);
+        Intent intent = new Intent(con.getApplicationContext(), RadioPlayerActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(con.getApplicationContext(), 0, intent, 0);
+        notification = new Notification.Builder(con.getApplicationContext())
+                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
+                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setSmallIcon(R.drawable.icon_notification)
+                .setLargeIcon(mBitmap)
+                .setContentIntent(pendingIntent)
+                .setOnlyAlertOnce(true)
+                .setDefaults(0)
+                .setWhen(0)
+                .getNotification();
+        notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+    }
+
     @TargetApi(16)
     private void createNotificationAPI16(int num)
     {
@@ -221,7 +252,7 @@ public class RemoteControlReceiver extends BroadcastReceiver
         if (num %2 == 0)
         {
             notificationManager =  (NotificationManager) (con.getSystemService(Context.NOTIFICATION_SERVICE));
-            notificationManager.cancel(01);
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
             icon = android.R.drawable.ic_media_play;
             if (RadioPlayerActivity.bPlay != null)
                 RadioPlayerActivity.bPlay.setChecked(false);
@@ -270,7 +301,7 @@ public class RemoteControlReceiver extends BroadcastReceiver
         //notification.flags |= Notification.FLAG_NO_CLEAR;
         //FragmentMainPage.updateInfoBox();
         RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
         abortBroadcast();
     }
 
@@ -284,16 +315,18 @@ public class RemoteControlReceiver extends BroadcastReceiver
         if (num %2 == 0)
         {
             notificationManager =  (NotificationManager) (con.getSystemService(Context.NOTIFICATION_SERVICE));
-            notificationManager.cancel(01);
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
             icon = android.R.drawable.ic_media_play;
             //FragmentMainPage.bPlay.setChecked(false);
-            RadioPlayerActivity.bPlay.setChecked(false);
+            if (RadioPlayerActivity.bPlay != null)
+                RadioPlayerActivity.bPlay.setChecked(false);
         }
         else
         {
-            icon= android.R.drawable.ic_media_pause;
+            icon = android.R.drawable.ic_media_pause;
             //FragmentMainPage.bPlay.setChecked(true);
-            RadioPlayerActivity.bPlay.setChecked(true);
+            if (RadioPlayerActivity.bPlay != null)
+                RadioPlayerActivity.bPlay.setChecked(true);
         }
         prefEditor.putBoolean(NOTIFICATION_CONTROLS, true).commit();
         Bitmap bitmap = BitmapFactory.decodeResource(con.getResources(), R.drawable.notification_large_icon_test_two);
@@ -311,7 +344,7 @@ public class RemoteControlReceiver extends BroadcastReceiver
                 .setDefaults(0)
                         //.setColor(getResources().getColor(R.color.blue_dark))
                 .setStyle(new Notification.MediaStyle()
-                        .setShowActionsInCompactView(new int[]{0, 1, 2}))
+                        .setShowActionsInCompactView(0, 1, 2))
                 .setPriority(Notification.PRIORITY_MAX)
                 .build();
 
@@ -323,7 +356,7 @@ public class RemoteControlReceiver extends BroadcastReceiver
 
         //FragmentMainPage.updateInfoBox();
         RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(21)
@@ -332,17 +365,17 @@ public class RemoteControlReceiver extends BroadcastReceiver
         Intent intent = new Intent();
         intent.setAction( intentAction );
         PendingIntent pendingIntent = PendingIntent.getBroadcast(con.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        return new Notification.Action.Builder( icon, title, pendingIntent ).build();
+        return new Notification.Action.Builder(icon, title, pendingIntent ).build();
 
     }
 
-    private void createNotificationControls(int num)
+    private void createNotificationControls(int number)
     {
         if (Build.VERSION.SDK_INT > 20)
-        {
-            createNotificationAPI21(num);
-        }
+            createNotificationAPI21(number);
+        else if (Build.VERSION.SDK_INT > 15 && Build.VERSION.SDK_INT <= 20)
+            createNotificationAPI16(number);
         else
-            createNotificationAPI16(num);
+            createNotificationAPI14();
     }
 }

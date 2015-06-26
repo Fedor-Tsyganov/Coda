@@ -43,7 +43,7 @@ android {
     buildToolsVersion "22"
     defaultConfig {
         applicationId "com.fedortsyganov.iptest"
-        minSdkVersion 16
+        minSdkVersion 14
         targetSdkVersion 22
         versionCode 3
         versionName "1.0"

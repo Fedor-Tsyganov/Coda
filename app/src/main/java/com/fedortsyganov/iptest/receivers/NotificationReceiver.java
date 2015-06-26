@@ -10,11 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
-import android.util.Log;
-import android.view.View;
 
 import com.fedortsyganov.iptest.MusicService;
 import com.fedortsyganov.iptest.R;
@@ -33,6 +29,7 @@ public class NotificationReceiver extends BroadcastReceiver
     private static final String STATION_TO_SAVE = "info";
     private static final String NOTIFICATION_CONTROLS = "NotificationCont";
     private static final String TAG = "MediaNotification";
+    private static final int NOTIFICATION_ID = 101;
     private Context con;
     private Intent startRadioIntent;
     private NotificationManager notificationManager;
@@ -43,7 +40,7 @@ public class NotificationReceiver extends BroadcastReceiver
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        preferences = context.getSharedPreferences(STATION_TO_SAVE, context.MODE_PRIVATE);
+        preferences = context.getSharedPreferences(STATION_TO_SAVE, Context.MODE_PRIVATE);
         prefEditor = preferences.edit();
         con = context;
         startRadioIntent = new Intent(con, MusicService.class);
@@ -101,7 +98,8 @@ public class NotificationReceiver extends BroadcastReceiver
                 startRadio();
             }
         }
-        RadioMainPageActivity.radioStation = RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition);
+        if (RadioMainPageActivity.previousStationsList != null)
+            RadioMainPageActivity.radioStation = RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition);
         if (FragmentRadioList.adapter != null)
             FragmentRadioList.adapter.notifyDataSetChanged();
         createNotificationControls(RadioMainPageActivity.counter);
@@ -135,6 +133,35 @@ public class NotificationReceiver extends BroadcastReceiver
         RadioMainPageActivity.isPaused = true;
         if (FragmentRadioList.adapter != null)
             FragmentRadioList.adapter.notifyDataSetChanged();
+    }
+
+    @TargetApi(14)
+    public void createNotificationAPI14()
+    {
+        Intent nextReceive = new Intent();
+        Intent previousReceive = new Intent();
+        Intent stopPlayReceive = new Intent();
+
+        nextReceive.setAction(NEXT_STATION);
+        previousReceive.setAction(PREVIOUS_STATION);
+        stopPlayReceive.setAction(STOP_PLAY);
+
+        Bitmap mBitmap = BitmapFactory.decodeResource(con.getResources(), R.drawable.notification_icon_small_coda);
+        Intent intent = new Intent(con.getApplicationContext(), RadioPlayerActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(con.getApplicationContext(), 0, intent, 0);
+        notification = new Notification.Builder(con.getApplicationContext())
+                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
+                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setSmallIcon(R.drawable.icon_notification)
+                .setLargeIcon(mBitmap)
+                .setContentIntent(pendingIntent)
+                .setOnlyAlertOnce(true)
+                .setDefaults(0)
+                .setWhen(0)
+                .getNotification();
+        notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(16)
@@ -203,7 +230,7 @@ public class NotificationReceiver extends BroadcastReceiver
         //notification.flags |= Notification.FLAG_NO_CLEAR;
         //FragmentMainPage.updateInfoBox();
         RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(21)
@@ -217,13 +244,15 @@ public class NotificationReceiver extends BroadcastReceiver
             //notificationManager.cancel(01);
             icon = android.R.drawable.ic_media_play;
             //FragmentMainPage.bPlay.setChecked(false);
-            RadioPlayerActivity.bPlay.setChecked(false);
+            if (RadioPlayerActivity.bPlay != null)
+                RadioPlayerActivity.bPlay.setChecked(false);
         }
         else
         {
-            icon= android.R.drawable.ic_media_pause;
+            icon = android.R.drawable.ic_media_pause;
             //FragmentMainPage.bPlay.setChecked(true);
-            RadioPlayerActivity.bPlay.setChecked(true);
+            if (RadioPlayerActivity.bPlay != null)
+                RadioPlayerActivity.bPlay.setChecked(true);
         }
         prefEditor.putBoolean(NOTIFICATION_CONTROLS, true).commit();
         Bitmap bitmap = BitmapFactory.decodeResource(con.getResources(), R.drawable.notification_large_icon_test_two);
@@ -241,11 +270,12 @@ public class NotificationReceiver extends BroadcastReceiver
                 .setDefaults(0)
                 //.setColor(getResources().getColor(R.color.blue_dark))
                 .setStyle(new Notification.MediaStyle()
-                        .setShowActionsInCompactView(new int[]{0, 1, 2}))
+                        .setShowActionsInCompactView(0, 1, 2))
                 .setPriority(Notification.PRIORITY_MAX)
                 .build();
 
         notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
+
         if (num %2 == 0)
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
         else
@@ -253,7 +283,7 @@ public class NotificationReceiver extends BroadcastReceiver
 
         //FragmentMainPage.updateInfoBox();
         RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(21)
@@ -269,10 +299,10 @@ public class NotificationReceiver extends BroadcastReceiver
     private void createNotificationControls(int num)
     {
         if (Build.VERSION.SDK_INT > 20)
-        {
             createNotificationAPI21(num);
-        }
-        else
+        else if (Build.VERSION.SDK_INT > 15 && Build.VERSION.SDK_INT <= 20)
             createNotificationAPI16(num);
+        else
+            createNotificationAPI14();
     }
 }

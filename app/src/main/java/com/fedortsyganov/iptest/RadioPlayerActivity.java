@@ -8,11 +8,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -31,7 +31,8 @@ import com.fedortsyganov.iptest.helpers.AirPlaneModChecker;
 import com.fedortsyganov.iptest.helpers.Debuger;
 import com.fedortsyganov.iptest.helpers.GenreListSelector;
 import com.fedortsyganov.iptest.objects.RadioStation;
-import com.fedortsyganov.iptest.receivers.*;
+import com.fedortsyganov.iptest.receivers.ConnectivityCheckingReceiver;
+import com.fedortsyganov.iptest.receivers.RadioAlarmReceiver;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.gson.Gson;
@@ -73,7 +74,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
     private DateTime now;
     private boolean canConnect = true;
     public static boolean changeStation = false;
-    private static final int NOTIFICATION_ID = 01;
+    private static final int NOTIFICATION_ID = 101;
     private boolean fromNotification = false;
     public static boolean changeList = true;
     public ArrayList <RadioStation> stationsBackUp;
@@ -92,14 +93,15 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
     {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_from_bot, R.anim.fade_out);
+        try { Class.forName("android.os.AsyncTask"); } catch(Throwable ignore) {}
         setContentView(R.layout.activity_radio_player);
 
         if (Debuger.DEBUG)
             Log.v("onCreate", " onCreate()");
         if (true)
         {
-            NotificationManager mnotificationManager = (NotificationManager) (getSystemService(Context.NOTIFICATION_SERVICE));
-            mnotificationManager.cancel(TAG, NOTIFICATION_ID);
+            NotificationManager mNotificationManager = (NotificationManager) (getSystemService(Context.NOTIFICATION_SERVICE));
+            mNotificationManager.cancel(TAG, NOTIFICATION_ID);
         }
 
         //mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
@@ -244,13 +246,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             bPlay.setChecked(true);
             if (RadioMainPageActivity.currentStationsList != null && RadioMainPageActivity.previousStationsList != null)
             {
-                if (!RadioMainPageActivity.currentStationsList.equals(RadioMainPageActivity.previousStationsList))
-                {
-                    RadioMainPageActivity.listsAreDifferent = true;
-                } else
-                {
-                    RadioMainPageActivity.listsAreDifferent = false;
-                }
+                RadioMainPageActivity.listsAreDifferent = !RadioMainPageActivity.currentStationsList.equals(RadioMainPageActivity.previousStationsList);
                 RadioMainPageActivity.currentStationsList = new ArrayList<>(RadioMainPageActivity.previousStationsList);
             }
             else
@@ -514,8 +510,10 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
     {
         if (Build.VERSION.SDK_INT > 20)
             createNotificationAPI21(num);
-        else
+        else if (Build.VERSION.SDK_INT > 15 && Build.VERSION.SDK_INT <= 20)
             createNotificationAPI16(num);
+        else
+            createNotificationAPI14();
     }
 
     @TargetApi(16)
@@ -572,7 +570,36 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
         //notification.flags |= Notification.FLAG_NO_CLEAR;
 
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+    }
+
+    @TargetApi(14)
+    public void createNotificationAPI14()
+    {
+        Intent nextReceive = new Intent();
+        Intent previousReceive = new Intent();
+        Intent stopPlayReceive = new Intent();
+
+        nextReceive.setAction(NEXT_STATION);
+        previousReceive.setAction(PREVIOUS_STATION);
+        stopPlayReceive.setAction(STOP_PLAY);
+
+        Bitmap mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_icon_small_coda);
+        Intent intent = new Intent(getApplicationContext(), RadioPlayerActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+        notification = new Notification.Builder(getApplicationContext())
+                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
+                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setSmallIcon(R.drawable.icon_notification)
+                .setLargeIcon(mBitmap)
+                .setContentIntent(pendingIntent)
+                .setOnlyAlertOnce(true)
+                .setDefaults(0)
+                .setWhen(0)
+                .getNotification();
+        notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     @TargetApi(21)
@@ -602,7 +629,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
                 .setDefaults(0)
                 .setWhen(0)
                 //.setColor(getResources().getColor(R.color.blue_dark))
-                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(new int[] {0, 1, 2}))
+                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(0, 1, 2))
                 .build();
 
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -612,7 +639,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
 
-        notificationManager.notify(TAG, 01, notification);
+        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
     }
 
     //api 21 notification builder
@@ -877,7 +904,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             MusicService.media = null;
             stopRadio();
         }
-        notificationManager.cancel(01);
+        notificationManager.cancel(TAG, NOTIFICATION_ID);
         super.onDestroy();
 
     }
