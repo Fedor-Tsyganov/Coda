@@ -112,6 +112,7 @@ public class RadioAlarmReceiver extends WakefulBroadcastReceiver
     {
         Bitmap mBitmap;
 
+        //checking for a version to show a correct icon.
         if (Build.VERSION.SDK_INT > 20)
             mBitmap = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.icon_notification_alarm_big);
         else

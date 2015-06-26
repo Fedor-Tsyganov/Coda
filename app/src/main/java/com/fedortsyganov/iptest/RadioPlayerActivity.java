@@ -93,6 +93,7 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
     {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_from_bot, R.anim.fade_out);
+        //sometimes google ads throw asynctask exception that closes app. This line avoids it.
         try { Class.forName("android.os.AsyncTask"); } catch(Throwable ignore) {}
         setContentView(R.layout.activity_radio_player);
 
