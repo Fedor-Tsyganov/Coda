@@ -2,8 +2,10 @@ package com.fedortsyganov.iptest;
 
 import android.app.Application;
 import com.crashlytics.android.Crashlytics;
+import com.flurry.android.FlurryAgent;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
+import com.mopub.common.MoPub;
 import io.fabric.sdk.android.Fabric;
 import java.util.HashMap;
 /**
@@ -11,10 +13,18 @@ import java.util.HashMap;
  */
 public class CodaApplication extends Application
 {
+    private final static String FLURRY_APIKEY = "JMNSNTZG8G4Z9FG9PHHY";
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         super.onCreate();
-        Fabric.with(this, new Crashlytics());    }
+        Fabric.with(this, new Crashlytics(), new MoPub());
+        // configure Flurry
+        FlurryAgent.setLogEnabled(false);
+        // init Flurry
+        FlurryAgent.init(this, FLURRY_APIKEY);
+
+    }
 
     private static final String PROPERTY_ID ="UA-40660764-3";
 

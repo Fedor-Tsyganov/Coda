@@ -58,6 +58,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
     private String URL;
 
     public static RemoteControlClientCompat remoteControlClientCompat;
+    public static AudioManagerCompat audioManagerCompat;
     //private MusicMetadataSet src_set;
     //private MediaSession mediaSession;
     public static MediaSessionCompat sessionCompat = null;
@@ -100,6 +101,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
             //Getting Exception
         }
         myAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        //audioManagerCompat = AudioManagerCompat.getAudioManagerCompat(getApplicationContext());
         if (sessionCompat != null && sessionCompat.isActive())
         {
             //do something
@@ -108,6 +110,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         {
             mRemoteControlResponder = new ComponentName(getPackageName(), RemoteControlReceiver.class.getName());
             registerRemoteClient();
+            //registerRemoteClientCompat();
             //updateMetadata();
 
             setSession(mRemoteControlResponder, getApplication().getBaseContext());
@@ -304,6 +307,7 @@ public class MusicService extends Service implements MediaPlayer.OnPreparedListe
         remoteControlClientCompat = new RemoteControlClientCompat(mediaPendingIntent);
         RemoteControlHelper.registerRemoteControlClient(myAudioManager, remoteControlClientCompat);
         remoteControlClientCompat.setTransportControlFlags(setTransportControlFlags());
+        audioManagerCompat.registerRemoteControlClient(remoteControlClientCompat);
 
     }
     @SuppressLint("NewApi")
