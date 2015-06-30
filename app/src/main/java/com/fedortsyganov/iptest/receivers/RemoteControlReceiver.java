@@ -19,6 +19,7 @@ import com.fedortsyganov.iptest.R;
 import com.fedortsyganov.iptest.RadioMainPageActivity;
 import com.fedortsyganov.iptest.RadioPlayerActivity;
 import com.fedortsyganov.iptest.fragments.FragmentRadioList;
+import com.fedortsyganov.iptest.helpers.Debuger;
 
 /**
  * Created by fedortsyganov on 5/14/15.
@@ -180,7 +181,8 @@ public class RemoteControlReceiver extends BroadcastReceiver
             }
             else
             {
-                Log.v("myreceiver", "from bluetooth else");
+                if (Debuger.DEBUG)
+                    Log.v("myreceiver", "from bluetooth else");
             }
             RadioMainPageActivity.radioStation = RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition);
             if (FragmentRadioList.adapter != null)
