@@ -441,11 +441,14 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
         boolean stationList = RadioMainPageActivity.currentStationsList != null;
         boolean previousStationlist = RadioMainPageActivity.previousStationsList != null;
         /*STATION_NAME+*/
-        boolean listSize = false;
+        boolean listSizeCurrent = false;
+        boolean listSizePrevious = false;
         if (stationList && previousStationlist)
-            listSize = RadioMainPageActivity.previousStationsList.size() <= RadioMainPageActivity.radioStationPosition;
+            listSizeCurrent = RadioMainPageActivity.currentStationsList.size() <= RadioMainPageActivity.radioStationPosition;
+        if (stationList && previousStationlist)
+            listSizePrevious = RadioMainPageActivity.previousStationsList.size() <= RadioMainPageActivity.radioStationPosition;
 
-        if (previousStationlist && listSize)
+        if (previousStationlist && listSizeCurrent)
         {
             if (tvStation != null && stationList)
                 tvStation.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName());

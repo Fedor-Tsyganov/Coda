@@ -280,7 +280,7 @@ public class FragmentSearch extends Fragment
         {
             Log.v("SEARCH_TEST", "------------------START----------------------");
         }
-        for (int i = 0; i < size - 1; i++)
+        for (int i = 0; i < size; i++)
         {
             String stationName = RadioMainPageActivity.testAllStations.get(i).getStationName();
             //value.trim().replaceAll("\\s{2}", " ") to replace extra spaces that are inserted
@@ -322,7 +322,7 @@ public class FragmentSearch extends Fragment
         int counter = 0;
         if (Debuger.DEBUG)
             Log.v("SEARCH_TEST", "------------------START----------------------");
-        for (int i = 0; i < size - 1; i++)
+        for (int i = 0; i < size; i++)
         {
             String countryName = RadioMainPageActivity.testAllStations.get(i).getStationCountry();
             boolean foundCountry =
@@ -350,7 +350,7 @@ public class FragmentSearch extends Fragment
     {
         final ArrayList<RadioStation> searchResult = new ArrayList<>();
         int size = RadioMainPageActivity.testAllStations.size();
-        for (int i = 0; i < size - 1; i++)
+        for (int i = 0; i < size; i++)
         {
 
             String countrySynonym = RSCountry.getSynonyms(value, getActivity().getBaseContext());

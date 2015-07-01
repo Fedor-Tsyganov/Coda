@@ -599,14 +599,17 @@ public class RadioMainPageActivity extends FragmentActivity implements View.OnCl
             @Override
             public void onClick(View v)
             {
-                if (!currentStationsList.equals(previousStationsList))
+                if (currentStationsList!=null && previousStationsList!=null)
                 {
-                    listsAreDifferent = true;
-                } else
-                {
-                    listsAreDifferent = false;
+                    if (!currentStationsList.equals(previousStationsList))
+                    {
+                        listsAreDifferent = true;
+                    } else
+                    {
+                        listsAreDifferent = false;
+                    }
+                    currentStationsList = new ArrayList<>(previousStationsList);
                 }
-                currentStationsList = new ArrayList<>(previousStationsList);
                 sendBroadcast(new Intent("com.fedortsyganov.iptest.STOP_PLAY"));
             }
         });
