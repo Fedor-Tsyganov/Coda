@@ -206,9 +206,27 @@ public class NotificationReceiver extends BroadcastReceiver
                 = PendingIntent.getBroadcast(con.getApplicationContext(), 0, previousReceive, PendingIntent.FLAG_UPDATE_CURRENT);
         PendingIntent pendingIntentNext
                 = PendingIntent.getBroadcast(con.getApplicationContext(), 0, nextReceive, PendingIntent.FLAG_UPDATE_CURRENT);
+        int position = 0;
+        try
+        {
+            position = new Integer(RadioMainPageActivity.radioStationPosition);
+        }
+        catch (NullPointerException e) {}
+        String title = "";
+        String contentText = "";
+        boolean cancelNotification = false;
+        //checking if app is force closed -> we cancel notification
+        if (RadioMainPageActivity.previousStationsList != null)
+        {
+            title = RadioMainPageActivity.previousStationsList.get(position).getStationName();
+            contentText = RadioMainPageActivity.previousStationsList.get(position).getStationGanre();
+        } else
+        {
+            cancelNotification = true;
+        }
         notification = new Notification.Builder(con.getApplicationContext())
-                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
-                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setContentTitle(title)
+                .setContentText(contentText)
                 .setSmallIcon(R.drawable.icon_notification)
                 .setLargeIcon(mBitmap)
                 .setContentIntent(pendingIntent)
@@ -228,9 +246,16 @@ public class NotificationReceiver extends BroadcastReceiver
         else
             notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
         //notification.flags |= Notification.FLAG_NO_CLEAR;
-        //FragmentMainPage.updateInfoBox();
-        RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+
+        if (cancelNotification)
+        {
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
+        }
+        else
+        {
+            RadioPlayerActivity.updateInfoBox();
+            notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        }
     }
 
     @TargetApi(21)
@@ -238,16 +263,15 @@ public class NotificationReceiver extends BroadcastReceiver
     {
         int icon;
 
-        if (num %2 == 0)
+        if (num % 2 == 0)
         {
-            notificationManager =  (NotificationManager) (con.getSystemService(Context.NOTIFICATION_SERVICE));
+            notificationManager = (NotificationManager) (con.getSystemService(Context.NOTIFICATION_SERVICE));
             //notificationManager.cancel(01);
             icon = android.R.drawable.ic_media_play;
             //FragmentMainPage.bPlay.setChecked(false);
             if (RadioPlayerActivity.bPlay != null)
                 RadioPlayerActivity.bPlay.setChecked(false);
-        }
-        else
+        } else
         {
             icon = android.R.drawable.ic_media_pause;
             //FragmentMainPage.bPlay.setChecked(true);
@@ -259,31 +283,44 @@ public class NotificationReceiver extends BroadcastReceiver
         Intent intent = new Intent(con.getApplicationContext(), RadioPlayerActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(con.getApplicationContext(), 77, intent, 0);
         Notification.MediaStyle mediaStyle = new Notification.MediaStyle();
-        notification = new Notification.Builder(con.getApplicationContext())
-                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
-                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
-                .setSmallIcon(R.drawable.icon_notification).setLargeIcon(bitmap)
-                .setContentIntent(pendingIntent).addAction(generateAction(android.R.drawable.ic_media_previous, "Previous", PREVIOUS_STATION))
-                .addAction(generateAction(icon, "Play", STOP_PLAY))
-                .addAction(generateAction(android.R.drawable.ic_media_next, "Next", NEXT_STATION))
-                .setWhen(0)
-                .setDefaults(0)
+        int position = 0;
+        try
+        {
+            position = new Integer(RadioMainPageActivity.radioStationPosition);
+        }
+        catch (NullPointerException e) {}
+        String title = "";
+        String contentText = "";
+        boolean cancelNotification = false;
+        //checking if app is force closed -> we cancel notification
+        if (RadioMainPageActivity.previousStationsList != null)
+        {
+            title = RadioMainPageActivity.previousStationsList.get(position).getStationName();
+            contentText = RadioMainPageActivity.previousStationsList.get(position).getStationGanre();
+        } else
+        {
+            cancelNotification = true;
+        }
+        notification = new Notification.Builder(con.getApplicationContext()).setContentTitle(title).setContentText(contentText).setSmallIcon(R.drawable.icon_notification).setLargeIcon(bitmap).setContentIntent(pendingIntent).addAction(generateAction(android.R.drawable.ic_media_previous, "Previous", PREVIOUS_STATION)).addAction(generateAction(icon, "Play", STOP_PLAY)).addAction(generateAction(android.R.drawable.ic_media_next, "Next", NEXT_STATION)).setWhen(0).setDefaults(0)
                 //.setColor(getResources().getColor(R.color.blue_dark))
-                .setStyle(new Notification.MediaStyle()
-                        .setShowActionsInCompactView(0, 1, 2))
-                .setPriority(Notification.PRIORITY_MAX)
-                .build();
+                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(0, 1, 2)).setPriority(Notification.PRIORITY_MAX).build();
 
         notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        if (num %2 == 0)
+        if (num % 2 == 0)
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
         else
             notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR;
 
-        //FragmentMainPage.updateInfoBox();
-        RadioPlayerActivity.updateInfoBox();
-        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        if (cancelNotification)
+        {
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
+        }
+        else
+        {
+            RadioPlayerActivity.updateInfoBox();
+            notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        }
     }
 
     @TargetApi(21)
