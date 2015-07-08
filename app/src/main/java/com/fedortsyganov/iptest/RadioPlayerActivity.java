@@ -552,19 +552,37 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
                 = PendingIntent.getBroadcast(getApplicationContext(), 0, previousReceive, PendingIntent.FLAG_UPDATE_CURRENT);
         PendingIntent pendingIntentNext
                 = PendingIntent.getBroadcast(getApplicationContext(), 0, nextReceive, PendingIntent.FLAG_UPDATE_CURRENT);
+        int position = 0;
+        try
+        {
+            position = new Integer(RadioMainPageActivity.radioStationPosition);
+        }
+        catch (NullPointerException e) {}
+        String title = "";
+        String contentText = "";
+        boolean cancelNotification = false;
+        //checking if app is force closed -> we cancel notification
+        if (RadioMainPageActivity.previousStationsList != null)
+        {
+            title = RadioMainPageActivity.previousStationsList.get(position).getStationName();
+            contentText = RadioMainPageActivity.previousStationsList.get(position).getStationGanre();
+        } else
+        {
+            cancelNotification = true;
+        }
         notification = new Notification.Builder(getApplicationContext())
-                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
-                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setContentTitle(title)
+                .setContentText(contentText)
                 .setSmallIcon(R.drawable.icon_notification)
                 .setLargeIcon(mBitmap)
                 .setContentIntent(pendingIntent)
                 .addAction(android.R.drawable.ic_media_rew, /*previous*/"", pendingIntentPrevious)
                 .addAction(icon, /*play*/"", pendingIntentStopPlay)
                 .addAction(android.R.drawable.ic_media_ff, /*next*/"", pendingIntentNext)
-                .setOnlyAlertOnce(true)
                 .setPriority(Notification.PRIORITY_MAX)
                 .setDefaults(0)
                 .setWhen(0)
+                .setOnlyAlertOnce(true)
                 .build();
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
@@ -574,7 +592,15 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
         //notification.flags |= Notification.FLAG_NO_CLEAR;
 
-        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        if (cancelNotification)
+        {
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
+        }
+        else
+        {
+            RadioPlayerActivity.updateInfoBox();
+            notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        }
     }
 
     @TargetApi(14)
@@ -621,20 +647,41 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.notification_large_icon_test_two);
         Intent intent = new Intent(getApplicationContext(), RadioPlayerActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 77, intent, 0);
+        int position = 0;
+        try
+        {
+            position = new Integer(RadioMainPageActivity.radioStationPosition);
+        }
+        catch (NullPointerException e) {}
+        String title = "";
+        String contentText = "";
+        boolean cancelNotification = false;
+        //checking if app is force closed -> we cancel notification
+        if (RadioMainPageActivity.previousStationsList != null)
+        {
+            title = RadioMainPageActivity.previousStationsList.get(position).getStationName();
+            contentText = RadioMainPageActivity.previousStationsList.get(position).getStationGanre();
+        } else
+        {
+            cancelNotification = true;
+        }
         notification = new Notification.Builder(getApplicationContext())
-                .setContentTitle(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName())
-                .setContentText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre())
+                .setContentTitle(title)
+                .setContentText(contentText)
                 .setSmallIcon(R.drawable.icon_notification)
                 .setLargeIcon(bitmap)
-                .setContentIntent(pendingIntent).addAction(generateAction(android.R.drawable.ic_media_previous, "Previous", PREVIOUS_STATION))
+                .setContentIntent(pendingIntent)
+                .addAction(generateAction(android.R.drawable.ic_media_previous, "Previous", PREVIOUS_STATION))
                 .addAction(generateAction(icon, "Play", STOP_PLAY))
-                .addAction(generateAction( android.R.drawable.ic_media_next, "Next", NEXT_STATION))
-                .setPriority(Notification.PRIORITY_MAX)
-                .setDefaults(0)
+                .addAction(generateAction(android.R.drawable.ic_media_next, "Next", NEXT_STATION))
                 .setWhen(0)
+                .setDefaults(0)
                 //.setColor(getResources().getColor(R.color.blue_dark))
-                .setStyle(new Notification.MediaStyle().setShowActionsInCompactView(0, 1, 2))
+                .setStyle(new Notification.MediaStyle()
+                        .setShowActionsInCompactView(0, 1, 2))
+                .setPriority(Notification.PRIORITY_MAX)
                 .build();
+
 
         notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (num %2 == 0)
@@ -643,7 +690,15 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
             notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
 
-        notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        if (cancelNotification)
+        {
+            notificationManager.cancel(TAG, NOTIFICATION_ID);
+        }
+        else
+        {
+            RadioPlayerActivity.updateInfoBox();
+            notificationManager.notify(TAG, NOTIFICATION_ID, notification);
+        }
     }
 
     //api 21 notification builder
@@ -866,9 +921,13 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
     @Override
     protected void onStop()
     {
+        try
+        {
+            Integer numNext = new Integer(RadioMainPageActivity.counter);
+            createNotificationControls(numNext - 1);
+        }
+        catch (NullPointerException e) {}
 
-        Integer numNext = new Integer(RadioMainPageActivity.counter);
-        createNotificationControls(numNext - 1);
         if (Debuger.DEBUG)
             Log.v("onStop", " onStop()");
         super.onStop();

@@ -49,7 +49,7 @@ android {
         applicationId "com.fedortsyganov.iptest"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 7
+        versionCode 8
         versionName "1.0"
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true
