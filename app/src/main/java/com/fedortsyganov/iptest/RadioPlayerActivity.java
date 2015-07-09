@@ -451,25 +451,55 @@ public class RadioPlayerActivity extends FragmentActivity implements View.OnClic
         if (previousStationlist && listSizeCurrent)
         {
             if (tvStation != null && stationList)
-                tvStation.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName());
-        /*STATION_COUNTRY+*/
-            if (tvCountry != null && stationList)
-                tvCountry.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationCountry());
+            {
+                try
+                {
+                    tvStation.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName());
+                } catch (NullPointerException e) {}
 
+            }/*STATION_COUNTRY+*/
+            if (tvCountry != null && stationList)
+            {
+                try
+                {
+                    tvCountry.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationCountry());
+                } catch (NullPointerException e) {}
+            }
         /*STATION_GENRE+*/
             if (tvGanre != null && stationList)
-                tvGanre.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre());
+            {
+                try
+                {
+                    tvGanre.setText(RadioMainPageActivity.currentStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre());
+                } catch (NullPointerException e) {}
+
+            }
         }
         else
         {
             if (tvStation != null && previousStationlist)
-                tvStation.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName());
+            {
+                try
+                {
+                    tvStation.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationName());
+                } catch (NullPointerException e) {}
+            }
         /*STATION_COUNTRY+*/
             if (tvCountry != null && previousStationlist)
-                tvCountry.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationCountry());
+            {
+                try
+                {
+                    tvCountry.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationCountry());
+                } catch (NullPointerException e) {}
+            }
         /*STATION_GENRE+*/
             if (tvGanre != null && previousStationlist)
-                tvGanre.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre());
+            {
+                try
+                {
+                    tvGanre.setText(RadioMainPageActivity.previousStationsList.get(RadioMainPageActivity.radioStationPosition).getStationGanre());
+                } catch (NullPointerException e) {}
+            }
         }
     }
 
